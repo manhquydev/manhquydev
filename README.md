@@ -6,8 +6,8 @@
   
   [![Website](https://img.shields.io/badge/Website-info.manhq.tech-0078D4?style=for-the-badge&logo=internetexplorer&logoColor=white)](https://info.manhq.tech)
   [![Email](https://img.shields.io/badge/Email-manhquydev@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manhquydev@gmail.com)
-  [![GitHub followers](https://img.shields.io/github/followers/ManhQuymqy?style=for-the-badge&logo=github&label=Followers&color=181717)](https://github.com/ManhQuymqy?tab=followers)
-  [![Profile views](https://komarev.com/ghpvc/?username=ManhQuymqy&style=for-the-badge&color=6e5494&label=Profile+Views)](https://github.com/ManhQuymqy)
+  [![GitHub followers](https://img.shields.io/github/followers/manhquydev?style=for-the-badge&logo=github&label=Followers&color=181717)](https://github.com/manhquydev?tab=followers)
+  [![Profile views](https://komarev.com/ghpvc/?username=manhquydev&style=for-the-badge&color=6e5494&label=Profile+Views)](https://github.com/manhquydev)
 
   > "Kết hợp công nghệ và giáo dục để xây dựng tương lai số" - Mạnh Quý, 2025
   
@@ -26,16 +26,16 @@
 <table>
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=ManhQuymqy&show_icons=true&theme=prussian&hide_border=true&count_private=true" alt="GitHub Stats" width="100%">
+      <img src="https://github-readme-stats.vercel.app/api?username=manhquydev&show_icons=true&theme=prussian&hide_border=true&count_private=true" alt="GitHub Stats" width="100%">
     </td>
     <td>
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=ManhQuymqy&theme=prussian&hide_border=true" alt="GitHub Streak" width="100%">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=manhquydev&theme=prussian&hide_border=true" alt="GitHub Streak" width="100%">
     </td>
   </tr>
 </table>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ManhQuymqy&layout=compact&theme=prussian&hide_border=true" alt="Top Languages">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manhquydev&layout=compact&theme=prussian&hide_border=true" alt="Top Languages">
 </div>
 
 ---
@@ -113,13 +113,13 @@ Xin chào! Tôi là **Mạnh Quý** — Developer với đam mê đặc biệt c
     <td width="50%" valign="top">
       <h3 align="center">Python Visualizer</h3>
       <div align="center">
-        <a href="https://github.com/ManhQuymqy/Python-Visualizer">
-          <img src="https://opengraph.githubassets.com/1/ManhQuymqy/Python-Visualizer" width="100%" alt="Python Visualizer">
+        <a href="https://github.com/manhquydev/Python-Visualizer">
+          <img src="https://opengraph.githubassets.com/1/manhquydev/Python-Visualizer" width="100%" alt="Python Visualizer">
         </a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ManhQuymqy/Python-Visualizer">
+          <a href="https://github.com/manhquydev/Python-Visualizer">
             <img src="https://img.shields.io/badge/Code-GitHub-3584E4?style=flat-square&logo=github" alt="GitHub Repository">
           </a>
           <a href="#">
@@ -133,13 +133,13 @@ Xin chào! Tôi là **Mạnh Quý** — Developer với đam mê đặc biệt c
     <td width="50%" valign="top">
       <h3 align="center">Student Forum Web</h3>
       <div align="center">
-        <a href="https://github.com/ManhQuymqy/student-forum-web">
-          <img src="https://opengraph.githubassets.com/1/ManhQuymqy/student-forum-web" width="100%" alt="Student Forum">
+        <a href="https://github.com/manhquydev/student-forum-web">
+          <img src="https://opengraph.githubassets.com/1/manhquydev/student-forum-web" width="100%" alt="Student Forum">
         </a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ManhQuymqy/student-forum-web">
+          <a href="https://github.com/manhquydev/student-forum-web">
             <img src="https://img.shields.io/badge/Code-GitHub-3584E4?style=flat-square&logo=github" alt="GitHub Repository">
           </a>
           <a href="#">
@@ -175,13 +175,13 @@ Xin chào! Tôi là **Mạnh Quý** — Developer với đam mê đặc biệt c
     <td width="50%" valign="top">
       <h3 align="center">CodeVision Academy</h3>
       <div align="center">
-        <a href="https://github.com/ManhQuymqy/CodeVision_Academy">
-          <img src="https://opengraph.githubassets.com/1/ManhQuymqy/CodeVision_Academy" width="100%" alt="CodeVision Academy">
+        <a href="https://github.com/manhquydev/CodeVision_Academy">
+          <img src="https://opengraph.githubassets.com/1/manhquydev/CodeVision_Academy" width="100%" alt="CodeVision Academy">
         </a>
         <br>
         <br>
         <p>
-          <a href="https://github.com/ManhQuymqy/CodeVision_Academy">
+          <a href="https://github.com/manhquydev/CodeVision_Academy">
             <img src="https://img.shields.io/badge/Code-GitHub-3584E4?style=flat-square&logo=github" alt="GitHub Repository">
           </a>
           <a href="#">
@@ -249,21 +249,21 @@ Xin chào! Tôi là **Mạnh Quý** — Developer với đam mê đặc biệt c
 ## 📊 Hoạt Động GitHub
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ManhQuymqy&theme=nord&column=7&margin-w=15&margin-h=15" alt="GitHub Trophies" width="100%">
+  <img src="https://github-profile-trophy.vercel.app/?username=manhquydev&theme=nord&column=7&margin-w=15&margin-h=15" alt="GitHub Trophies" width="100%">
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ManhQuymqy&theme=nord_dark" width="100%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=manhquydev&theme=nord_dark" width="100%">
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ManhQuymqy&theme=nord_dark" width="32%">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ManhQuymqy&theme=nord_dark" width="32%">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ManhQuymqy&theme=nord_dark" width="32%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=manhquydev&theme=nord_dark" width="32%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=manhquydev&theme=nord_dark" width="32%">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=manhquydev&theme=nord_dark" width="32%">
 </div>
 
 ---
