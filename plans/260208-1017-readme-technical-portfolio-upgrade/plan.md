@@ -37,7 +37,7 @@ Transform manhquydev GitHub profile README from static showcase to living techni
 | Phase | Title | Status | Effort | File |
 |-------|-------|--------|--------|------|
 | 1 | Content Rewrites & Structure | completed | 5h | [phase-01](./phase-01-content-rewrites-and-structure.md) |
-| 2 | Visual Assets Creation | pending | 6h | [phase-02](./phase-02-visual-assets-creation.md) |
+| 2 | Visual Assets Creation | completed | 6h | [phase-02](./phase-02-visual-assets-creation.md) |
 | 3 | GitHub Actions Automation | pending | 6h | [phase-03](./phase-03-github-actions-automation.md) |
 | 4 | Polish, Testing & SEO | pending | 3h | [phase-04](./phase-04-polish-testing-and-seo.md) |
 

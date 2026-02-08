@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="progressTitle progressDesc">
+  <title id="progressTitle">Currently Learning Progress - 2025</title>
+  <desc id="progressDesc">Progress bars showing learning advancement: TensorFlow & PyTorch at 30%, GraphQL APIs at 40%, and Microservices Architecture at 50%</desc>
+
+  <style>
+    .bg { fill: #2E3440; }
+    .label-text { fill: #ECEFF4; }
+    .progress-bg { fill: #4C566A; }
+    .progress-text { fill: #ECEFF4; }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #ECEFF4; }
+      .label-text { fill: #2E3440; }
+      .progress-bg { fill: #D8DEE9; }
+      .progress-text { fill: #2E3440; }
+    }
+
+    /* Subtle animation on load */
+    @keyframes fillProgress {
+      from { width: 0; }
+      to { width: var(--final-width); }
+    }
+
+    .progress-fill {
+      animation: fillProgress 1.5s ease-out forwards;
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="200" class="bg" rx="10"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="label-text" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Currently Learning - 2025</text>
+
+  <!-- TensorFlow & PyTorch - 30% -->
+  <text x="20" y="70" class="label-text" font-family="Arial, sans-serif" font-size="14" font-weight="bold">TensorFlow & PyTorch</text>
+  <rect x="20" y="75" width="760" height="25" class="progress-bg" rx="12.5"/>
+  <rect x="20" y="75" width="228" height="25" fill="#FF6F00" rx="12.5" class="progress-fill" style="--final-width: 228px"/>
+  <text x="400" y="93" text-anchor="middle" class="progress-text" font-family="Arial, sans-serif" font-size="12">30%</text>
+
+  <!-- GraphQL APIs - 40% -->
+  <text x="20" y="125" class="label-text" font-family="Arial, sans-serif" font-size="14" font-weight="bold">GraphQL APIs</text>
+  <rect x="20" y="130" width="760" height="25" class="progress-bg" rx="12.5"/>
+  <rect x="20" y="130" width="304" height="25" fill="#E10098" rx="12.5" class="progress-fill" style="--final-width: 304px"/>
+  <text x="400" y="148" text-anchor="middle" class="progress-text" font-family="Arial, sans-serif" font-size="12">40%</text>
+
+  <!-- Microservices Architecture - 50% -->
+  <text x="20" y="180" class="label-text" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Microservices Architecture</text>
+  <rect x="20" y="185" width="760" height="25" class="progress-bg" rx="12.5"/>
+  <rect x="20" y="185" width="380" height="25" fill="#326CE5" rx="12.5" class="progress-fill" style="--final-width: 380px"/>
+  <text x="400" y="203" text-anchor="middle" class="progress-text" font-family="Arial, sans-serif" font-size="12">50%</text>
+</svg>

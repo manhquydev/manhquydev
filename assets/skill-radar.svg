@@ -1,0 +1,76 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="skillRadarTitle skillRadarDesc">
+  <title id="skillRadarTitle">Technical Skills Radar Chart</title>
+  <desc id="skillRadarDesc">Pentagon radar chart showing technical proficiency across 5 skill areas: Frontend 5/5, Backend 4/5, Database 3/5, DevOps 2/5, AI/ML 2/5</desc>
+
+  <style>
+    .bg { fill: #2E3440; }
+    .grid-line { stroke: #4C566A; }
+    .grid-circle { stroke: #4C566A; }
+    .skill-polygon { fill: rgba(53,132,228,0.15); stroke: #3584E4; }
+    .data-point { fill: #3584E4; }
+    .label-text { fill: #ECEFF4; }
+    .level-text { fill: #88C0D0; }
+
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #ECEFF4; }
+      .grid-line { stroke: #D8DEE9; }
+      .grid-circle { stroke: #D8DEE9; }
+      .skill-polygon { fill: rgba(53,132,228,0.2); stroke: #3584E4; }
+      .data-point { fill: #3584E4; }
+      .label-text { fill: #2E3440; }
+      .level-text { fill: #5E81AC; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="500" height="500" class="bg"/>
+
+  <!-- Grid circles (concentric circles at 20% intervals) -->
+  <circle cx="250" cy="250" r="180" fill="none" class="grid-circle" stroke-width="1" opacity="0.3"/>
+  <circle cx="250" cy="250" r="144" fill="none" class="grid-circle" stroke-width="1" opacity="0.3"/>
+  <circle cx="250" cy="250" r="108" fill="none" class="grid-circle" stroke-width="1" opacity="0.3"/>
+  <circle cx="250" cy="250" r="72" fill="none" class="grid-circle" stroke-width="1" opacity="0.3"/>
+  <circle cx="250" cy="250" r="36" fill="none" class="grid-circle" stroke-width="1" opacity="0.3"/>
+
+  <!-- Grid lines from center to each pentagon vertex -->
+  <line x1="250" y1="250" x2="250" y2="70" class="grid-line" stroke-width="1" opacity="0.3"/>
+  <line x1="250" y1="250" x2="421" y2="141" class="grid-line" stroke-width="1" opacity="0.3"/>
+  <line x1="250" y1="250" x2="357" y2="393" class="grid-line" stroke-width="1" opacity="0.3"/>
+  <line x1="250" y1="250" x2="143" y2="393" class="grid-line" stroke-width="1" opacity="0.3"/>
+  <line x1="250" y1="250" x2="79" y2="141" class="grid-line" stroke-width="1" opacity="0.3"/>
+
+  <!-- Skill polygon representing proficiency levels (Frontend:5, Backend:4, Database:3, DevOps:2, AI/ML:2) -->
+  <!-- Pentagon with vertices at 72° intervals, starting at top (270°) -->
+  <!-- Each skill plotted at distance = (level/5) * 180px from center -->
+  <!-- Points: Frontend(top): 250,70  Backend(right): 421,182  Database(bottom-right): 357,357  DevOps(bottom-left): 143,357  AI/ML(left): 79,182 -->
+
+  <polygon points="250,70 421,182 357,357 143,357 79,182"
+           class="skill-polygon"
+           stroke-width="3"/>
+
+  <!-- Data points at each skill vertex -->
+  <circle cx="250" cy="70" r="6" class="data-point"/>
+  <circle cx="421" cy="182" r="6" class="data-point"/>
+  <circle cx="357" cy="357" r="6" class="data-point"/>
+  <circle cx="143" cy="357" r="6" class="data-point"/>
+  <circle cx="79" cy="182" r="6" class="data-point"/>
+
+  <!-- Labels -->
+  <text x="250" y="55" text-anchor="middle" class="label-text" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Frontend</text>
+  <text x="250" y="40" text-anchor="middle" class="level-text" font-family="Arial, sans-serif" font-size="14">5/5</text>
+
+  <text x="435" y="185" text-anchor="start" class="label-text" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Backend</text>
+  <text x="435" y="200" text-anchor="start" class="level-text" font-family="Arial, sans-serif" font-size="14">4/5</text>
+
+  <text x="365" y="380" text-anchor="middle" class="label-text" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Database</text>
+  <text x="365" y="395" text-anchor="middle" class="level-text" font-family="Arial, sans-serif" font-size="14">3/5</text>
+
+  <text x="135" y="380" text-anchor="middle" class="label-text" font-family="Arial, sans-serif" font-size="16" font-weight="bold">DevOps</text>
+  <text x="135" y="395" text-anchor="middle" class="level-text" font-family="Arial, sans-serif" font-size="14">2/5</text>
+
+  <text x="65" y="185" text-anchor="end" class="label-text" font-family="Arial, sans-serif" font-size="16" font-weight="bold">AI/ML</text>
+  <text x="65" y="200" text-anchor="end" class="level-text" font-family="Arial, sans-serif" font-size="14">2/5</text>
+
+  <!-- Title -->
+  <text x="250" y="470" text-anchor="middle" class="label-text" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Technical Skills Overview</text>
+</svg>

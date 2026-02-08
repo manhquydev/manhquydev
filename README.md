@@ -156,9 +156,20 @@
 
 </div>
 
-<!-- Phase 2: Dynamic skills visualization (see phase-02-visual-assets-creation.md) -->
-<!-- TODO: Add SVG skill radar chart -->
-<!-- TODO: Add progress bars for "Currently Learning" -->
+<div align="center">
+
+### 📊 Skills Radar
+
+<img src="./assets/skill-radar.svg" alt="Pentagon radar chart showing technical proficiency across 5 skill areas: Frontend 5/5, Backend 4/5, Database 3/5, DevOps 2/5, AI/ML 2/5. Interactive visualization with Nord theme design." width="400">
+
+### 📈 Currently Learning (2025)
+
+<img src="./assets/progress-bars/learning-progress.svg" alt="Animated progress bars showing current learning advancement: TensorFlow & PyTorch at 30%, GraphQL APIs at 40%, and Microservices Architecture at 50%. Visual learning roadmap with color-coded tracks." width="600">
+
+</div>
+
+<!-- Phase 2: Visual assets implemented (see phase-02-visual-assets-creation.md) -->
+<!-- Note: Demo GIFs using GitHub opengraph placeholders - upgrade to real recordings in future iteration -->
 
 ---
 
