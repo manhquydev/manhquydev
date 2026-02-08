@@ -6,9 +6,9 @@
 
 **Building the future of education through technology** | Bridging code and learning
 
-[![Website](https://img.shields.io/badge/🌐_Website-manhquy.id.vn-0078D4?style=for-the-badge)](https://www.manhquy.id.vn/)
-[![Resume](https://img.shields.io/badge/📄_View_Resume-0078D4?style=for-the-badge)](https://www.manhquy.id.vn/)
-[![Email](https://img.shields.io/badge/💼_Hire_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manhquydev@gmail.com)
+[![Website](https://img.shields.io/badge/Website-manhquy.id.vn-0078D4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.manhquy.id.vn/)
+[![Resume](https://img.shields.io/badge/View_Resume-0078D4?style=for-the-badge&logo=readthedocs&logoColor=white)](https://www.manhquy.id.vn/)
+[![Email](https://img.shields.io/badge/Hire_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manhquydev@gmail.com)
 
 <img src="https://img.shields.io/badge/3%2B-Years%20Experience-blue?style=for-the-badge"/> <img src="https://img.shields.io/badge/10%2B-Projects%20Shipped-green?style=for-the-badge"/> <img src="https://img.shields.io/badge/50K%2B-Lines%20of%20Code-orange?style=for-the-badge"/>
 
@@ -20,7 +20,7 @@
 
 ---
 
-## 📊 GitHub Stats
+## GitHub Stats
 
 <table>
   <tr>
@@ -39,18 +39,18 @@
 
 ---
 
-## 🎯 Featured Projects
+## Featured Projects
 
-### 🔹 Python Visualizer
+### Python Visualizer
 
 > **Problem:** Students struggle to understand code execution flow and variable states during Python programming learning.
 >
 > **Solution:** Interactive step-by-step Python code visualizer that breaks down execution into comprehensible stages.
 >
 > **Impact:**
-> - 📊 **2,500+** students using the tool
-> - ⚡ **80%** improvement in code comprehension (based on user feedback)
-> - 🌟 **32** GitHub stars | **Active development**
+> - **2,500+** students using the tool
+> - **80%** improvement in code comprehension (based on user feedback)
+> - **32** GitHub stars | **Active development**
 >
 > **Tech Stack:** JavaScript (80.8%), CSS (18.3%), HTML (0.9%)
 > **Core Technologies:** React, Canvas API, Monaco Editor, Python AST Parser
@@ -66,16 +66,16 @@
 
 ---
 
-### 🔹 Student Forum Web
+### Student Forum Web
 
 > **Problem:** Lack of collaborative platforms where students can discuss coursework, share resources, and work on projects together.
 >
 > **Solution:** Comprehensive forum platform with real-time discussions, resource sharing, and project collaboration features.
 >
 > **Impact:**
-> - 👥 **1,800+** active discussions
-> - 📚 **500+** shared resources
-> - 🤝 **300+** collaborative project threads
+> - **1,800+** active discussions
+> - **500+** shared resources
+> - **300+** collaborative project threads
 >
 > **Tech Stack:** JavaScript (74.9%), CSS (24.9%), HTML (0.2%)
 > **Core Technologies:** Node.js, Express, MongoDB, Socket.io, React
@@ -92,7 +92,7 @@
 ---
 
 <details>
-<summary><b>📂 Other Notable Projects</b></summary>
+<summary><b>Other Notable Projects</b></summary>
 
 <table>
   <tr>
@@ -131,7 +131,7 @@
 
 ---
 
-## 🛠️ Technical Skills
+## Technical Skills
 
 <div align="center">
 
@@ -158,11 +158,11 @@
 
 <div align="center">
 
-### 📊 Skills Radar
+### Skills Radar
 
 <img src="./assets/skill-radar.svg" alt="Pentagon radar chart showing technical proficiency across 5 skill areas: Frontend 5/5, Backend 4/5, Database 3/5, DevOps 2/5, AI/ML 2/5. Interactive visualization with Nord theme design." width="400">
 
-### 📈 Currently Learning (2025)
+### Currently Learning (2025)
 
 <img src="./assets/progress-bars/learning-progress.svg" alt="Animated progress bars showing current learning advancement: TensorFlow & PyTorch at 30%, GraphQL APIs at 40%, and Microservices Architecture at 50%. Visual learning roadmap with color-coded tracks." width="600">
 
@@ -173,10 +173,10 @@
 
 ---
 
-## 📝 Latest Blog Posts & Technical Writing
+## Latest Blog Posts & Technical Writing
 
 <!-- BLOG-POST-LIST:START -->
-### 📝 Latest Blog Posts
+### Latest Blog Posts
 
 _Automated feed from Dev.to - Updates daily via GitHub Actions_
 
@@ -186,14 +186,14 @@ Check out my [website](https://www.manhquy.id.vn/) for more articles and updates
 ---
 
 <!-- PROJECT-STATS:START -->
-### 📊 Live Project Stats
+### Live Project Stats
 
 _Project statistics updated weekly via GitHub Actions_
 <!-- PROJECT-STATS:END -->
 
 ---
 
-## 📈 This Week's Coding Activity
+## This Week's Coding Activity
 
 <!-- Phase 3: WakaTime integration (see phase-03-github-actions-automation.md) -->
 <!-- TODO: Auto-update weekly coding stats via GitHub Actions -->
@@ -203,7 +203,7 @@ _Project statistics updated weekly via GitHub Actions_
 ---
 
 <details>
-<summary><b>👨‍💻 About Me (Vietnamese / Tiếng Việt)</b></summary>
+<summary><b>About Me (Vietnamese / Tiếng Việt)</b></summary>
 
 <br>
 
@@ -211,18 +211,18 @@ Xin chào! Tôi là **Mạnh Quý** — Full-Stack Developer với đam mê đ�
 
 > "Kết hợp công nghệ và giáo dục để xây dựng tương lai số" - Mạnh Quý, 2025
 
-### 🎯 Hiện Tại
+### Hiện Tại
 
-- 🔭 Phát triển các nền tảng học tập tương tác và công cụ EdTech
-- 🌱 Nghiên cứu AI trong giáo dục và phát triển ứng dụng đa nền tảng
-- 👨‍🏫 Mục tiêu trở thành Tech Teacher kết hợp kỹ năng lập trình với giảng dạy
-- 🚀 Tin rằng công nghệ có thể cách mạng hóa cách chúng ta học và dạy
+- Phát triển các nền tảng học tập tương tác và công cụ EdTech
+- Nghiên cứu AI trong giáo dục và phát triển ứng dụng đa nền tảng
+- Mục tiêu trở thành Tech Teacher kết hợp kỹ năng lập trình với giảng dạy
+- Tin rằng công nghệ có thể cách mạng hóa cách chúng ta học và dạy
 
-### 💭 Triết Lý
+### Triết Lý
 
 > "Công nghệ tốt nhất là công nghệ giúp con người phát triển, và giáo dục tốt nhất là giáo dục tận dụng công nghệ đó để khai phóng tiềm năng."
 
-### 🔮 Tầm Nhìn 2025
+### Tầm Nhìn 2025
 
 Phát triển các nền tảng EdTech thế hệ mới, nơi học viên không chỉ tiếp thu kiến thức mà còn được truyền cảm hứng và tham gia vào quá trình học tập một cách chủ động. Kết hợp AI, phân tích dữ liệu và trải nghiệm người dùng để tạo ra cuộc cách mạng trong giáo dục.
 
@@ -231,28 +231,28 @@ Phát triển các nền tảng EdTech thế hệ mới, nơi học viên không
 ---
 
 <details>
-<summary><b>🎓 Learning Journey & Continuous Development</b></summary>
+<summary><b>Learning Journey & Continuous Development</b></summary>
 
 <br>
 
 <table>
   <tr>
     <td width="70%">
-      <h3>🔍 Currently Exploring</h3>
+      <h3>Currently Exploring</h3>
       <ul>
-        <li>💻 Advanced React Design Patterns & Server Components</li>
-        <li>🧠 Machine Learning for Educational Data Analysis</li>
-        <li>📱 React Native & Flutter for Cross-Platform Learning Apps</li>
-        <li>🔄 CI/CD and DevOps for EdTech Platforms</li>
+        <li>Advanced React Design Patterns & Server Components</li>
+        <li>Machine Learning for Educational Data Analysis</li>
+        <li>React Native & Flutter for Cross-Platform Learning Apps</li>
+        <li>CI/CD and DevOps for EdTech Platforms</li>
       </ul>
     </td>
     <td width="30%">
-      <h3>🎯 2025 Goals</h3>
+      <h3>2025 Goals</h3>
       <ul>
-        <li>🎯 TensorFlow & PyTorch</li>
-        <li>🎯 GraphQL APIs</li>
-        <li>🎯 Microservices</li>
-        <li>🎯 Serverless Computing</li>
+        <li>TensorFlow & PyTorch</li>
+        <li>GraphQL APIs</li>
+        <li>Microservices</li>
+        <li>Serverless Computing</li>
       </ul>
     </td>
   </tr>
@@ -263,7 +263,7 @@ Phát triển các nền tảng EdTech thế hệ mới, nơi học viên không
 ---
 
 <details>
-<summary><b>📈 EdTech Roadmap 2025-2030</b></summary>
+<summary><b>EdTech Roadmap 2025-2030</b></summary>
 
 <br>
 
@@ -303,7 +303,7 @@ Phát triển các nền tảng EdTech thế hệ mới, nơi học viên không
   </table>
 </div>
 
-### 🛣️ Multi-Year Vision
+### Multi-Year Vision
 
 - **2025:** AI-powered interactive learning platforms
 - **2026:** Advanced learning analytics & data-driven insights
@@ -316,7 +316,7 @@ Phát triển các nền tảng EdTech thế hệ mới, nơi học viên không
 
 ---
 
-## 📊 GitHub Activity
+## GitHub Activity
 
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=manhquydev&theme=nord&column=7&margin-w=15&margin-h=15" alt="GitHub Trophies" width="100%">
@@ -338,7 +338,7 @@ Phát triển các nền tảng EdTech thế hệ mới, nơi học viên không
 
 ---
 
-## 📫 Let's Connect
+## Let's Connect
 
 <div align="center">
 
