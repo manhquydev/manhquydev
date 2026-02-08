@@ -1,0 +1,23 @@
+{
+  "name": "manhquydev-profile",
+  "version": "1.0.0",
+  "description": "Automated GitHub profile README with dynamic content updates",
+  "private": true,
+  "scripts": {
+    "update:blog": "node scripts/fetch-blog-posts.js && node scripts/update-readme.js",
+    "update:stats": "node scripts/fetch-project-stats.js && node scripts/update-readme.js",
+    "update:all": "npm run update:blog && npm run update:stats",
+    "test:blog": "node scripts/fetch-blog-posts.js",
+    "test:stats": "GITHUB_TOKEN=$GITHUB_TOKEN node scripts/fetch-project-stats.js"
+  },
+  "keywords": [
+    "github-profile",
+    "readme",
+    "automation",
+    "github-actions"
+  ],
+  "author": "manhquydev",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

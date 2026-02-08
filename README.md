@@ -175,12 +175,21 @@
 
 ## 📝 Latest Blog Posts & Technical Writing
 
-<!-- Phase 3: Dynamic blog post integration (see phase-03-github-actions-automation.md) -->
-<!-- TODO: Auto-update from Dev.to, Medium, Hashnode, Personal Blog via GitHub Actions -->
+<!-- BLOG-POST-LIST:START -->
+### 📝 Latest Blog Posts
 
-📚 **Coming Soon:** Automated feed from my technical blog covering EdTech innovations, full-stack development patterns, and learning technology insights.
+_Automated feed from Dev.to - Updates daily via GitHub Actions_
 
-In the meantime, check out my [website](https://www.manhquy.id.vn/) for articles and updates.
+Check out my [website](https://www.manhquy.id.vn/) for more articles and updates.
+<!-- BLOG-POST-LIST:END -->
+
+---
+
+<!-- PROJECT-STATS:START -->
+### 📊 Live Project Stats
+
+_Project statistics updated weekly via GitHub Actions_
+<!-- PROJECT-STATS:END -->
 
 ---
 
