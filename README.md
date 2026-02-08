@@ -91,6 +91,27 @@
 
 ---
 
+### Enterprise & Private Projects
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/6%2B-Private_Projects-success?style=for-the-badge"/> <img src="https://img.shields.io/badge/2%2B-Enterprise_Clients-0078D4?style=for-the-badge"/>
+
+</div>
+
+> **Domains**: EdTech Platforms • Learning Management Systems • Student Collaboration Tools • Enterprise SaaS
+>
+> **Tech Stack**: Node.js, React, MongoDB, PostgreSQL, Redis, Docker, Microservices, AWS
+>
+> **Key Achievements**:
+> - Built scalable learning platforms for enterprise educational institutions
+> - Developed production-grade authentication & authorization systems
+> - Implemented real-time collaborative features with WebSocket technology
+> - Optimized database performance and query efficiency
+> - Delivered end-to-end solutions from architecture design to deployment
+
+---
+
 <details>
 <summary><b>Other Notable Projects</b></summary>
 
@@ -358,6 +379,6 @@ Phát triển các nền tảng EdTech thế hệ mới, nơi học viên không
 ---
 
 <div align="center">
-  <h4>© 2025 Mạnh Quý • Full-Stack Developer • EdTech Innovator</h4>
-  <sub>Last updated: February 8, 2025 | Built with ❤️ for the future of education</sub>
+  <h4>© 2026 Mạnh Quý • Full-Stack Developer • EdTech Innovator</h4>
+  <sub>Last updated: February 8, 2026 | Built with ❤️ for the future of education</sub>
 </div>
