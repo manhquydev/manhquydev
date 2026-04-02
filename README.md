@@ -1,44 +1,47 @@
-<!-- Premium Hero -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/premium/premium-hero-dark.svg">
-  <img src="./assets/premium/premium-hero-light.svg" width="100%" alt="Manh Quy - Full-Stack Developer">
-</picture>
-
 <!-- Typing Animation -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=1E66F5&center=true&vCenter=true&width=600&lines=Full-Stack+Developer;EdTech+Systems+Specialist;Clean+Architecture+Advocate;Always+Learning+New+Things" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7aa2f7&center=true&vCenter=true&width=600&lines=Full-Stack+Developer;EdTech+Systems+Specialist;Clean+Architecture+Advocate;Always+Learning+New+Things" alt="Typing SVG" />
 </p>
 
 <!-- Shield Stats Badges -->
 <p align="center">
   <a href="https://github.com/manhquydev">
-    <img src="https://img.shields.io/github/followers/manhquydev?style=for-the-badge&logo=github&color=1E66F5&labelColor=313244" alt="GitHub Followers" />
+    <img src="https://img.shields.io/github/followers/manhquydev?style=for-the-badge&logo=github&color=7aa2f7&labelColor=1a1b26" alt="GitHub Followers" />
   </a>
   <a href="https://github.com/manhquydev">
-    <img src="https://img.shields.io/github/stars/manhquydev?style=for-the-badge&logo=github&color=8839EF&labelColor=313244" alt="GitHub Stars" />
+    <img src="https://img.shields.io/github/stars/manhquydev?style=for-the-badge&logo=github&color=bb9af7&labelColor=1a1b26" alt="GitHub Stars" />
   </a>
-  <img src="https://komarev.com/ghpvc/?username=manhquydev&style=for-the-badge&color=04A5E5&labelColor=313244" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=manhquydev&style=for-the-badge&color=7aa2f7&labelColor=1a1b26" alt="Profile Views" />
 </p>
-
-<!-- Premium Contact Rail -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/premium/premium-contact-dark.svg">
-  <img src="./assets/premium/premium-contact-light.svg" width="100%" alt="Contact Links">
-</picture>
 
 ---
 
-<!-- Premium Stats Dashboard -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/premium/premium-stats-dashboard-dark.svg">
-  <img src="./assets/premium/premium-stats-dashboard-light.svg" width="100%" alt="GitHub Stats Dashboard">
-</picture>
+<!-- GitHub Stats Cards -->
+## 📊 GitHub Stats
+
+<p align="center">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img src="https://github-readme-stats.vercel.app/api?username=manhquydev&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&icon_color=bb9af7&text_color=a9b1d6&count_private=true" alt="GitHub Stats" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manhquydev&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=a9b1d6" alt="Top Languages" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com?user=manhquydev&theme=tokyonight&hide_border=true&background=1a1b26&stroke=7aa2f7&ring=bb9af7&fire=ff9e64&currStreakNum=7aa2f7&sideNums=a9b1d6&currStreakLabel=7aa2f7&sideLabels=a9b1d6" alt="GitHub Streak" />
+  </a>
+</p>
 
 <sub>Data sourced from GitHub REST API & GraphQL • Auto-updated daily</sub>
 
 ---
 
-<!-- Premium Tech Stack -->
+<!-- Tech Stack -->
 ### 🛠️ Tech Stack
 
 <p align="center">
@@ -60,16 +63,7 @@
 
 ---
 
-<!-- Premium Work Focus -->
-### Focus Areas
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/premium/premium-work-focus-dark.svg">
-  <img src="./assets/premium/premium-work-focus-light.svg" width="100%" alt="Focus Areas">
-</picture>
-
----
-
+<!-- Activity Graph -->
 <!-- Contribution Details - Expanded -->
 <details open>
 <summary>📊 Contribution Details</summary>
@@ -104,6 +98,7 @@
 
 ---
 
+<!-- Social -->
 ## 📫 Connect With Me
 
 <p align="center">
@@ -117,10 +112,11 @@
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   <a href="https://www.manhquy.id.vn/">
-    <img src="https://img.shields.io/badge/Website-1E66F5?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website" />
+    <img src="https://img.shields.io/badge/Website-7aa2f7?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=1a1b26" alt="Website" />
   </a>
 </p>
 
+<!-- Current Focus -->
 ## 🎯 Current Focus
 
 ```
@@ -130,6 +126,7 @@
 ⚡ Fun fact    I automate everything possible
 ```
 
+<!-- Quote -->
 ### 💡 Random Dev Quote
 
 <p align="center">
@@ -138,6 +135,7 @@
 
 ---
 
+<!-- Wave Footer -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer&animation=twinkling" alt="Wave footer" />
 </p>
