@@ -1,49 +1,73 @@
 <div align="center">
 
-# Hi, I'm Manh Quy
+# Manh Quy
 
 ### Full-Stack Developer | EdTech Product Builder
 
-I build practical web products that help people learn faster.
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&duration=2200&pause=900&center=true&vCenter=true&width=650&lines=Building+practical+web+products;Shipping+backend+%2B+frontend+end-to-end;Focused+on+EdTech%2C+Dev+Tools%2C+Automation)](https://git.io/typing-svg)
 
 [![Website](https://img.shields.io/badge/Website-manhquy.id.vn-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.manhquy.id.vn/)
 [![Email](https://img.shields.io/badge/Email-manhquydev%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manhquydev@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-manhquy-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/manhquy)
 
 [![GitHub followers](https://img.shields.io/github/followers/manhquydev?style=for-the-badge&logo=github&label=Followers)](https://github.com/manhquydev?tab=followers)
+[![GitHub User's stars](https://img.shields.io/github/stars/manhquydev?style=for-the-badge&logo=github&label=Total+Stars)](https://github.com/manhquydev?tab=repositories)
 [![Profile views](https://komarev.com/ghpvc/?username=manhquydev&style=for-the-badge&label=Profile+Views)](https://github.com/manhquydev)
 
 </div>
 
 ---
 
-## About
+## Current Focus
 
-- 3+ years building full-stack web applications.
-- Focused on EdTech, developer tools, and collaborative products.
-- Strong in shipping features end-to-end: product thinking, backend, frontend, deployment.
-- Open to freelance and full-time opportunities.
+| Area | Focus |
+|---|---|
+| Day-to-day | Building scalable web features and APIs |
+| Product domain | EdTech, learning workflows, collaboration systems |
+| Engineering direction | Performance, maintainability, DX automation |
+| Open to | Freelance and full-time opportunities |
 
-## Core Expertise
+## Tech Stack
 
-- **Backend:** Node.js, Express, REST API design, authentication, real-time systems.
-- **Frontend:** React, JavaScript/TypeScript, responsive UI, component architecture.
-- **Data:** MongoDB, MySQL, PostgreSQL, query optimization.
-- **Delivery:** GitHub Actions, Docker, CI/CD, cloud deployment.
+<div align="center">
 
-## Selected Projects
+![JavaScript](https://img.shields.io/badge/JavaScript-111827?style=flat&logo=javascript&logoColor=F7DF1E)
+![TypeScript](https://img.shields.io/badge/TypeScript-111827?style=flat&logo=typescript&logoColor=3178C6)
+![Node.js](https://img.shields.io/badge/Node.js-111827?style=flat&logo=nodedotjs&logoColor=339933)
+![React](https://img.shields.io/badge/React-111827?style=flat&logo=react&logoColor=61DAFB)
+![Express](https://img.shields.io/badge/Express-111827?style=flat&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-111827?style=flat&logo=mongodb&logoColor=47A248)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-111827?style=flat&logo=postgresql&logoColor=4169E1)
+![Docker](https://img.shields.io/badge/Docker-111827?style=flat&logo=docker&logoColor=2496ED)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-111827?style=flat&logo=githubactions&logoColor=2088FF)
 
-| Project | What it solves | Stack | Link |
-|---|---|---|---|
-| **Python Visualizer** | Helps students understand code execution step by step. | React, Canvas API, Monaco, AST parsing | [Repo](https://github.com/manhquydev/Python-Visualizer) |
-| **Student Forum Web** | Student collaboration hub for discussions and resource sharing. | Node.js, Express, MongoDB, Socket.io, React | [Repo](https://github.com/manhquydev/student-forum-web) |
-| **CodeVision Academy** | E-learning platform for practical programming education. | JavaScript, React, Node.js | [Repo](https://github.com/manhquydev/CodeVision_Academy) |
+</div>
 
-## GitHub Snapshot
+## Featured Projects
+
+### Python Visualizer
+
+Interactive visualizer for Python execution flow. Built to help students understand variables, scopes, and step-by-step runtime behavior.
+
+[![Repo](https://img.shields.io/badge/Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/manhquydev/Python-Visualizer)
+![Python Visualizer preview](https://opengraph.githubassets.com/1/manhquydev/Python-Visualizer)
+
+### Student Forum Web
+
+Real-time collaboration platform for student discussions, resource sharing, and project threads.
+
+[![Repo](https://img.shields.io/badge/Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/manhquydev/student-forum-web)
+![Student Forum preview](https://opengraph.githubassets.com/1/manhquydev/student-forum-web)
+
+## GitHub Analytics
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=manhquydev&show_icons=true&theme=transparent&hide_border=true&count_private=true" alt="GitHub stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manhquydev&layout=compact&theme=transparent&hide_border=true" alt="Top languages" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=manhquydev&bg_color=ffffff00&color=3b82f6&line=3b82f6&point=111827&area=true&hide_border=true" alt="Activity graph" />
 </div>
 
 ---
