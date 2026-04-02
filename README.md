@@ -1,13 +1,19 @@
 <div align="center">
   <h1>Manh Quy</h1>
   <p>Full-Stack Developer focused on EdTech systems</p>
-  <p>
-    <a href="https://www.manhquy.id.vn/">Website</a> |
-    <a href="https://linkedin.com/in/manhquy">LinkedIn</a> |
-    <a href="mailto:manhquydev@gmail.com">Email</a> |
-    <a href="https://github.com/manhquydev">GitHub</a>
-  </p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/readme/contact-rail-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/readme/contact-rail-light.svg">
+    <img alt="Contact Links" src="./assets/readme/contact-rail-light.svg" width="100%">
+  </picture>
 </div>
+
+<p align="center">
+  <a href="https://www.manhquy.id.vn/"><strong>Website</strong></a> |
+  <a href="https://linkedin.com/in/manhquy"><strong>LinkedIn</strong></a> |
+  <a href="mailto:manhquydev@gmail.com"><strong>Email</strong></a> |
+  <a href="https://github.com/manhquydev"><strong>GitHub</strong></a>
+</p>
 
 ---
 
@@ -18,9 +24,25 @@ My focus is clean architecture, reliable backend services, and maintainable fron
 
 ## Core Stack
 
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/readme/core-stack-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/readme/core-stack-light.svg">
+    <img alt="Core Stack Visual" src="./assets/readme/core-stack-light.svg" width="100%">
+  </picture>
+</div>
+
 `JavaScript` `TypeScript` `React` `Node.js` `Express` `MongoDB` `PostgreSQL` `Docker` `GitHub Actions`
 
 ## Work Focus Snapshot
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/readme/work-focus-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/readme/work-focus-light.svg">
+    <img alt="Work Focus Snapshot" src="./assets/readme/work-focus-light.svg" width="100%">
+  </picture>
+</div>
 
 <table>
   <tr>
@@ -220,4 +242,4 @@ pie showData
 
 ---
 
-Data source policy: GitHub REST API and GitHub GraphQL via GitHub Actions. No third-party render services.
+All profile metrics and visuals are generated directly from GitHub APIs and refreshed automatically by GitHub Actions.
