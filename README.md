@@ -33,8 +33,8 @@
 ## GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=manhquydev&show_icons=true&theme=transparent&hide_border=true&count_private=true" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manhquydev&layout=compact&theme=transparent&hide_border=true" alt="Top languages" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=manhquydev&show_icons=true&theme=transparent&hide_border=true&count_private=true" alt="GitHub stats" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=manhquydev&layout=compact&theme=transparent&hide_border=true" alt="Top languages" />
 </div>
 
 ---
