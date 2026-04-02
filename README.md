@@ -59,12 +59,12 @@ My focus is clean architecture, reliable backend services, and maintainable fron
   <tr>
     <td align="center"><strong>Followers</strong><br/>2</td>
     <td align="center"><strong>Public Repos</strong><br/>18</td>
-    <td align="center"><strong>Contributions (30d)</strong><br/>16</td>
-    <td align="center"><strong>Contributions (12m)</strong><br/>80</td>
+    <td align="center"><strong>Contributions (30d)</strong><br/>18</td>
+    <td align="center"><strong>Contributions (12m)</strong><br/>82</td>
   </tr>
 </table>
 
-<sub>Last updated: 2026-04-02 11:22:55 UTC</sub>
+<sub>Last updated: 2026-04-02 11:23:37 UTC</sub>
 <!-- HERO-KPI:END -->
 
 <details open>
@@ -120,10 +120,10 @@ pie showData
 <summary><strong>Contribution Activity</strong></summary>
 
 <!-- CONTRIBUTION-ACTIVITY:START -->
-**Contributions (12m):** 80  
-**Contributions (30d):** 16
+**Contributions (12m):** 82  
+**Contributions (30d):** 18
 
-`............................:#`
+`.............................#`
 
 <sub>Trend line for recent days (`.` low -> `#` high).</sub>
 
@@ -143,9 +143,9 @@ pie showData
 | 2026-03-28 | 0 |
 | 2026-03-29 | 0 |
 | 2026-03-30 | 0 |
-| 2026-03-31 | 0 |
-| 2026-04-01 | 2 |
-| 2026-04-02 | 14 |
+| 2026-03-31 | 1 |
+| 2026-04-01 | 1 |
+| 2026-04-02 | 16 |
 
 </details>
 
@@ -153,14 +153,14 @@ pie showData
 
 | Event Type | Count |
 |---|---:|
-| PushEvent | 14 |
+| PushEvent | 15 |
 | WatchEvent | 9 |
 | ForkEvent | 2 |
 
 ```mermaid
 pie showData
   title Public Event Type Mix
-  "PushEvent" : 14
+  "PushEvent" : 15
   "WatchEvent" : 9
   "ForkEvent" : 2
 ```
