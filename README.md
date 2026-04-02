@@ -48,7 +48,13 @@
 ## 📊 GitHub Analytics
 
 <!-- GITHUB-ANALYTICS:START -->
-<p align="center"><em>Loading GitHub analytics...</em></p>
+<p align="center">
+  <samp>Profile: <a href="https://github.com/manhquydev">manhquydev</a> | Following: 2 | Public Repos: 18</samp>
+</p>
+
+<p align="center">
+  <samp>Top Languages: JavaScript · TypeScript · HTML · C++ · Python</samp>
+</p>
 <!-- GITHUB-ANALYTICS:END -->
 
 ---
@@ -67,7 +73,9 @@
 <!-- CONTRIBUTION-GRAPH:END -->
 
 <!-- CONTRIBUTION-ACTIVITY:START -->
-<p align="center"><em>Loading contribution activity...</em></p>
+<p align="center">
+  <samp>Contributions (12m): 83 | Contributions (30d): 19</samp>
+</p>
 <!-- CONTRIBUTION-ACTIVITY:END -->
 
 ### 📈 Activity Graph
@@ -86,7 +94,9 @@
 ## 📁 Project Statistics
 
 <!-- PROJECT-STATS:START -->
-<p align="center"><em>Loading project statistics...</em></p>
+<p align="center">
+  <samp><a href="https://github.com/manhquydev/manhquydev">manhquydev</a> · <a href="https://github.com/manhquydev/rice-cooker-order-system">rice-cooker-order-system</a> · <a href="https://github.com/manhquydev/AI-Book-Weaver-new">AI-Book-Weaver-new</a></samp>
+</p>
 <!-- PROJECT-STATS:END -->
 
 ---
