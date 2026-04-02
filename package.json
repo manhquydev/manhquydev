@@ -4,11 +4,12 @@
   "description": "Automated GitHub profile README with dynamic content updates",
   "private": true,
   "scripts": {
-    "update:blog": "node scripts/fetch-blog-posts.js && node scripts/update-readme.js",
+    "update:metrics": "node scripts/fetch-github-metrics.js && node scripts/update-readme.js",
     "update:stats": "node scripts/fetch-project-stats.js && node scripts/update-readme.js",
-    "update:all": "npm run update:blog && npm run update:stats",
-    "test:blog": "node scripts/fetch-blog-posts.js",
-    "test:stats": "node scripts/fetch-project-stats.js"
+    "update:all": "node scripts/fetch-github-metrics.js && node scripts/fetch-project-stats.js && node scripts/update-readme.js",
+    "test:metrics": "node scripts/fetch-github-metrics.js",
+    "test:stats": "node scripts/fetch-project-stats.js",
+    "test:update": "node scripts/update-readme.js"
   },
   "keywords": [
     "github-profile",

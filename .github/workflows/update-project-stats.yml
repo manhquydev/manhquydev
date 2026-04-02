@@ -1,12 +1,12 @@
-name: Update Project Stats
+name: Update GitHub Data
 
 on:
   schedule:
-    - cron: '0 6 * * 1'  # Weekly on Monday at 6 AM UTC
+    - cron: '0 3 * * *'  # Daily at 03:00 UTC
   workflow_dispatch:      # Manual trigger for testing
 
 jobs:
-  update-stats:
+  update-github-data:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,16 +20,21 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Fetch GitHub account and contribution metrics
+        run: node scripts/fetch-github-metrics.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Fetch project statistics
         run: node scripts/fetch-project-stats.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update README with stats
+      - name: Update README with GitHub data
         run: node scripts/update-readme.js
 
       - name: Commit and push if changed
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git diff --quiet README.md || (git add README.md && git commit -m "docs: update project stats [skip ci]" && git push)
+          git diff --quiet README.md || (git add README.md && git commit -m "docs: update github data [skip ci]" && git push)

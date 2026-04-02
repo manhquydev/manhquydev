@@ -1,92 +1,139 @@
-<div align="center">
+# Manh Quy
 
-# Hi there, I'm Manh Quy
+Full-Stack Developer focused on private EdTech systems.
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=3B82F6&center=true&vCenter=true&width=520&lines=Full-Stack+Developer;EdTech+Product+Builder;Shipping+practical+systems)](https://git.io/typing-svg)
-
-[![GitHub followers](https://img.shields.io/github/followers/manhquydev?logo=github&style=for-the-badge&color=3B82F6&labelColor=111827)](https://github.com/manhquydev)
-[![GitHub User's stars](https://img.shields.io/github/stars/manhquydev?style=for-the-badge&logo=github&color=3B82F6&labelColor=111827)](https://github.com/manhquydev)
-[![Profile views](https://komarev.com/ghpvc/?username=manhquydev&style=for-the-badge&color=3B82F6)](https://github.com/manhquydev)
-
-</div>
+[Website](https://www.manhquy.id.vn/) | [LinkedIn](https://linkedin.com/in/manhquy) | [Email](mailto:manhquydev@gmail.com) | [GitHub](https://github.com/manhquydev)
 
 ---
+
+## About
+
+- 3+ years building full-stack web applications.
+- Focused on EdTech platforms, learning workflows, and collaboration features.
+- Strong in end-to-end delivery: architecture, backend, frontend, and CI/CD.
+- Open to freelance and full-time opportunities.
 
 ## Tech Stack
 
-<div align="center">
-
-![JavaScript](https://img.shields.io/badge/JavaScript-1F2937?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![TypeScript](https://img.shields.io/badge/TypeScript-1F2937?style=for-the-badge&logo=typescript&logoColor=3178C6)
-![Node.js](https://img.shields.io/badge/Node.js-1F2937?style=for-the-badge&logo=nodedotjs&logoColor=339933)
-![React](https://img.shields.io/badge/React-1F2937?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Express](https://img.shields.io/badge/Express-1F2937?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-1F2937?style=for-the-badge&logo=mongodb&logoColor=47A248)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-1F2937?style=for-the-badge&logo=postgresql&logoColor=4169E1)
-![Docker](https://img.shields.io/badge/Docker-1F2937?style=for-the-badge&logo=docker&logoColor=2496ED)
-![GitHub_Actions](https://img.shields.io/badge/GitHub_Actions-1F2937?style=for-the-badge&logo=githubactions&logoColor=2088FF)
-
-</div>
+- Languages: JavaScript, TypeScript
+- Frontend: React
+- Backend: Node.js, Express
+- Databases: MongoDB, PostgreSQL
+- Delivery: Docker, GitHub Actions
 
 ---
 
-## GitHub Analytics
+## GitHub Analytics (Real Data)
 
-<div align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=manhquydev&show_icons=true&theme=transparent&hide_border=true&count_private=true" alt="GitHub stats" />
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=manhquydev&layout=compact&theme=transparent&hide_border=true" alt="Top languages" />
-</div>
+<!-- GITHUB-ANALYTICS:START -->
+| Metric | Value |
+|---|---|
+| Profile | [manhquydev](https://github.com/manhquydev) |
+| Followers | 2 |
+| Following | 2 |
+| Public Repositories | 18 |
+| Public Gists | 0 |
+| Total Stars (owned repos) | 0 |
+| Total Forks (owned repos) | 0 |
+| Account Created | 2022-11-11 |
+| Last Updated (UTC) | 2026-04-02T10:43:18 |
 
----
+Top Languages (by repository count)
 
-## Contribution Graph
+| Language | Repositories |
+|---|---|
+| JavaScript | 2 |
+| HTML | 1 |
+| TypeScript | 1 |
+| C++ | 1 |
+| Python | 1 |
 
-<div align="center">
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=manhquydev&theme=github-compact&hide_border=true&area=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
-
-</div>
-
----
-
-## Contribution Snake
-
-<div align="center">
-
-![Contribution Snake](https://raw.githubusercontent.com/manhquydev/manhquydev/output/github-contribution-grid-snake-dark.svg)
-
-</div>
-
----
-
-## Current Focus
-
-```text
-Work        Full-stack development for private EdTech products
-Building    Scalable APIs, auth systems, and collaborative workflows
-Improving   Performance, maintainability, and delivery speed
-Open to     Freelance and full-time opportunities
-```
+_Source: GitHub REST API._
+<!-- GITHUB-ANALYTICS:END -->
 
 ---
 
-## Latest Writing
+## Contribution Activity (Real Data)
 
-<!-- BLOG-POST-LIST:START -->
-### Latest Blog Posts
+<!-- CONTRIBUTION-ACTIVITY:START -->
+Total Contributions (Last 12 Months): **76**  
+Total Contributions (Last 30 Days): **12**
 
-_No recent Dev.to posts found._
-<!-- BLOG-POST-LIST:END -->
+Daily trend (last 30 days)
+
+| Date | Contributions | Trend |
+|---|---:|---|
+| 2026-03-04 | 0 | . |
+| 2026-03-05 | 0 | . |
+| 2026-03-06 | 0 | . |
+| 2026-03-07 | 0 | . |
+| 2026-03-08 | 0 | . |
+| 2026-03-09 | 0 | . |
+| 2026-03-10 | 0 | . |
+| 2026-03-11 | 0 | . |
+| 2026-03-12 | 0 | . |
+| 2026-03-13 | 0 | . |
+| 2026-03-14 | 0 | . |
+| 2026-03-15 | 0 | . |
+| 2026-03-16 | 0 | . |
+| 2026-03-17 | 0 | . |
+| 2026-03-18 | 0 | . |
+| 2026-03-19 | 0 | . |
+| 2026-03-20 | 0 | . |
+| 2026-03-21 | 0 | . |
+| 2026-03-22 | 0 | . |
+| 2026-03-23 | 0 | . |
+| 2026-03-24 | 0 | . |
+| 2026-03-25 | 0 | . |
+| 2026-03-26 | 0 | . |
+| 2026-03-27 | 0 | . |
+| 2026-03-28 | 0 | . |
+| 2026-03-29 | 0 | . |
+| 2026-03-30 | 0 | . |
+| 2026-03-31 | 0 | . |
+| 2026-04-01 | 2 | ### |
+| 2026-04-02 | 10 | ################ |
+
+Top Event Types (latest public events)
+
+| Event Type | Count |
+|---|---:|
+| PushEvent | 10 |
+| WatchEvent | 9 |
+| ForkEvent | 2 |
+
+_Source: GitHub GraphQL + GitHub REST API._
+<!-- CONTRIBUTION-ACTIVITY:END -->
+
+---
+
+## Contribution Graph (Real Data)
+
+<!-- CONTRIBUTION-GRAPH:START -->
+GitHub contribution heatmap (last 12 weeks)
+
+| Day | Pattern |
+|---|---|
+| Sun | `....#.......` |
+| Mon | `............` |
+| Tue | `............` |
+| Wed | `-.=........-` |
+| Thu | `...........@` |
+| Fri | `............` |
+| Sat | `............` |
+
+Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high
+
+_Source: GitHub GraphQL contributions calendar._
+<!-- CONTRIBUTION-GRAPH:END -->
 
 ---
 
 ## Open-source Snapshot
 
 <!-- PROJECT-STATS:START -->
-### Live Project Stats
-
 | Project | Stars | Forks | Language |
-|---------|-------|-------|----------|
+|---|---:|---:|---|
 | [manhquydev](https://github.com/manhquydev/manhquydev) | 0 | 0 | JavaScript |
 | [rice-cooker-order-system](https://github.com/manhquydev/rice-cooker-order-system) | 0 | 0 | HTML |
 | [AI-Book-Weaver-new](https://github.com/manhquydev/AI-Book-Weaver-new) | 0 | 0 | TypeScript |
@@ -94,18 +141,5 @@ _No recent Dev.to posts found._
 | [HTQL-SieuThi](https://github.com/manhquydev/HTQL-SieuThi) | 0 | 0 | C++ |
 | [phuoc](https://github.com/manhquydev/phuoc) | 0 | 0 | N/A |
 
-_Updated weekly via GitHub Actions._
+_Source: GitHub REST API._
 <!-- PROJECT-STATS:END -->
-
----
-
-## Connect
-
-<div align="center">
-
-[![Website](https://img.shields.io/badge/Website-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.manhquy.id.vn/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/manhquy)
-[![GitHub](https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white)](https://github.com/manhquydev)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:manhquydev@gmail.com)
-
-</div>
