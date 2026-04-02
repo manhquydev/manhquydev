@@ -40,6 +40,32 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
+function escapeMermaidLabel(value) {
+  return String(value).replaceAll('"', '\\"');
+}
+
+function buildMermaidPieChart(title, items, labelKey, valueKey) {
+  const safeItems = (items || [])
+    .map((item) => ({
+      label: item?.[labelKey] ?? "Unknown",
+      value: Number(item?.[valueKey] ?? 0),
+    }))
+    .filter((item) => Number.isFinite(item.value) && item.value > 0);
+
+  if (safeItems.length === 0) {
+    return "_No chart data available._";
+  }
+
+  let chart = "```mermaid\n";
+  chart += "pie showData\n";
+  chart += `  title ${title}\n`;
+  safeItems.forEach((item) => {
+    chart += `  "${escapeMermaidLabel(item.label)}" : ${item.value}\n`;
+  });
+  chart += "```";
+  return chart;
+}
+
 function generateHeroKpiSection(metrics) {
   const user = metrics.user || {};
   const contribution = metrics.contribution || {};
@@ -88,6 +114,14 @@ function generateAnalyticsSection(metrics) {
     markdown += "\n";
   }
 
+  markdown += "\n";
+  markdown += buildMermaidPieChart(
+    "Top Languages by Repository Count",
+    languages,
+    "language",
+    "repositories"
+  );
+  markdown += "\n";
   markdown += "\n<sub>Source: GitHub REST API.</sub>\n";
   return markdown.trimEnd();
 }
@@ -174,6 +208,14 @@ function generateContributionActivitySection(metrics) {
     });
   }
 
+  markdown += "\n";
+  markdown += buildMermaidPieChart(
+    "Public Event Type Mix",
+    eventTypes,
+    "type",
+    "count"
+  );
+  markdown += "\n";
   markdown += "\n<sub>Source: GitHub GraphQL + GitHub REST API.</sub>\n";
   return markdown.trimEnd();
 }

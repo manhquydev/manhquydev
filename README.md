@@ -74,6 +74,16 @@ My focus is clean architecture, reliable backend services, and maintainable fron
 
 `JavaScript: 2` `HTML: 1` `TypeScript: 1` `C++: 1` `Python: 1`
 
+```mermaid
+pie showData
+  title Top Languages by Repository Count
+  "JavaScript" : 2
+  "HTML" : 1
+  "TypeScript" : 1
+  "C++" : 1
+  "Python" : 1
+```
+
 <sub>Source: GitHub REST API.</sub>
 <!-- GITHUB-ANALYTICS:END -->
 
@@ -140,6 +150,14 @@ Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high
 | PushEvent | 12 |
 | WatchEvent | 9 |
 | ForkEvent | 2 |
+
+```mermaid
+pie showData
+  title Public Event Type Mix
+  "PushEvent" : 11
+  "WatchEvent" : 9
+  "ForkEvent" : 2
+```
 
 <sub>Source: GitHub GraphQL + GitHub REST API.</sub>
 <!-- CONTRIBUTION-ACTIVITY:END -->
