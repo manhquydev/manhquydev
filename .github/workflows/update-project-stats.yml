@@ -37,4 +37,4 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git diff --quiet README.md assets/readme/github-dashboard-light.svg assets/readme/github-dashboard-dark.svg || (git add README.md assets/readme/github-dashboard-light.svg assets/readme/github-dashboard-dark.svg && git commit -m "docs: update github data [skip ci]" && git push)
+          git diff --quiet README.md assets/readme/github-dashboard-light.svg assets/readme/github-dashboard-dark.svg assets/readme/contribution-heatmap-light.svg assets/readme/contribution-heatmap-dark.svg || (git add README.md assets/readme/github-dashboard-light.svg assets/readme/github-dashboard-dark.svg assets/readme/contribution-heatmap-light.svg assets/readme/contribution-heatmap-dark.svg && git commit -m "docs: update github data [skip ci]" && git push)

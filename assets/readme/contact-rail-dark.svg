@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="130" viewBox="0 0 1120 130" role="img" aria-label="Contact rail">
+  <rect x="0" y="0" width="1120" height="130" rx="16" fill="#0d1117"/>
+  <rect x="24" y="22" width="250" height="86" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="44" y="53" fill="#e6edf3" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15" font-weight="600">Website</text>
+  <text x="44" y="78" fill="#9aa4b2" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">manhquy.id.vn</text>
+  <rect x="294" y="22" width="250" height="86" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="314" y="53" fill="#e6edf3" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15" font-weight="600">LinkedIn</text>
+  <text x="314" y="78" fill="#9aa4b2" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">linkedin.com/in/manhquy</text>
+  <rect x="564" y="22" width="250" height="86" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="584" y="53" fill="#e6edf3" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15" font-weight="600">Email</text>
+  <text x="584" y="78" fill="#9aa4b2" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">manhquydev@gmail.com</text>
+  <rect x="834" y="22" width="262" height="86" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="854" y="53" fill="#e6edf3" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15" font-weight="600">GitHub</text>
+  <text x="854" y="78" fill="#9aa4b2" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">github.com/manhquydev</text>
+</svg>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="220" viewBox="0 0 1120 220" role="img" aria-label="Work focus snapshot">
+  <rect x="0" y="0" width="1120" height="220" rx="16" fill="#f8fafc"/>
+  <text x="30" y="40" fill="#0f172a" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="24" font-weight="700">Work Focus Snapshot</text>
+  <rect x="30" y="62" width="520" height="132" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="52" y="90" fill="#334155" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="16" font-weight="600">Domain Focus</text>
+  <text x="52" y="120" fill="#0f172a" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15">- EdTech platforms</text>
+  <text x="52" y="145" fill="#0f172a" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15">- Learning workflows</text>
+  <text x="52" y="170" fill="#0f172a" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15">- Collaboration systems</text>
+  <rect x="570" y="62" width="520" height="132" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="592" y="90" fill="#334155" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="16" font-weight="600">Delivery Focus</text>
+  <text x="592" y="120" fill="#0f172a" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15">- System architecture</text>
+  <text x="592" y="145" fill="#0f172a" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15">- Backend API design</text>
+  <text x="592" y="170" fill="#0f172a" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15">- Frontend implementation & CI/CD</text>
+</svg>
