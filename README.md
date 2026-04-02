@@ -14,30 +14,9 @@
   <img src="https://komarev.com/ghpvc/?username=manhquydev&style=for-the-badge&color=7aa2f7&labelColor=1a1b26" alt="Profile Views" />
 </p>
 
----
-
-<!-- GitHub Stats Cards -->
-## 📊 GitHub Stats
-
 <p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api?username=manhquydev&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&icon_color=bb9af7&text_color=a9b1d6&count_private=true" alt="GitHub Stats" />
-  </a>
+  <samp>📦 18 repos | 📝 82 contributions | 👥 2 followers</samp>
 </p>
-
-<p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manhquydev&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=a9b1d6" alt="Top Languages" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://git.io/streak-stats">
-    <img src="https://streak-stats.demolab.com?user=manhquydev&theme=tokyonight&hide_border=true&background=1a1b26&stroke=7aa2f7&ring=bb9af7&fire=ff9e64&currStreakNum=7aa2f7&sideNums=a9b1d6&currStreakLabel=7aa2f7&sideLabels=a9b1d6" alt="GitHub Streak" />
-  </a>
-</p>
-
-<sub>Data sourced from GitHub REST API & GraphQL • Auto-updated daily</sub>
 
 ---
 
@@ -83,15 +62,6 @@
   <a href="https://github.com/ashutosh00710/github-readme-activity-graph">
     <img src="https://github-readme-activity-graph.vercel.app/graph?username=manhquydev&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" />
   </a>
-</p>
-
-### 🐍 Contribution Snake
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/manhquydev/manhquydev/output/github-snake-dark.svg">
-    <img src="https://raw.githubusercontent.com/manhquydev/manhquydev/output/github-snake.svg" alt="Snake animation" />
-  </picture>
 </p>
 
 </details>
