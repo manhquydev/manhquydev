@@ -5,51 +5,131 @@ const METRICS_DATA = "data/github-metrics.json";
 const STATS_DATA = "data/project-stats.json";
 
 function updateSection(content, startMarker, endMarker, newContent) {
-  const startIdx = content.indexOf(startMarker);
-  const endIdx = content.indexOf(endMarker);
-
-  if (startIdx === -1 || endIdx === -1) {
+  if (!content.includes(startMarker) || !content.includes(endMarker)) {
     console.warn(`Markers not found: ${startMarker}`);
     return content;
   }
 
-  return (
-    content.slice(0, startIdx + startMarker.length) +
-    "\n" +
-    newContent +
-    content.slice(endIdx)
-  );
+  const escapedStart = startMarker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const escapedEnd = endMarker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const blockPattern = new RegExp(`${escapedStart}[\\s\\S]*?${escapedEnd}`);
+  const replacement = `${startMarker}\n${newContent.trimEnd()}\n${endMarker}`;
+
+  return content.replace(blockPattern, replacement);
+}
+
+function formatDate(value) {
+  if (!value) {
+    return "N/A";
+  }
+  return value.slice(0, 10);
+}
+
+function formatDateTimeUtc(value) {
+  if (!value) {
+    return "N/A";
+  }
+  return `${value.slice(0, 19).replace("T", " ")} UTC`;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function generateHeroKpiSection(metrics) {
+  const user = metrics.user || {};
+  const contribution = metrics.contribution || {};
+
+  const followers = user.followers ?? 0;
+  const publicRepos = user.publicRepos ?? 0;
+  const last30 = contribution.totalContributionsLast30Days ?? 0;
+  const lastYear = contribution.totalContributionsLastYear ?? 0;
+  const updatedAt = formatDateTimeUtc(metrics.generatedAt || "");
+
+  return [
+    "<table>",
+    "  <tr>",
+    `    <td align="center"><strong>Followers</strong><br/>${followers}</td>`,
+    `    <td align="center"><strong>Public Repos</strong><br/>${publicRepos}</td>`,
+    `    <td align="center"><strong>Contributions (30d)</strong><br/>${last30}</td>`,
+    `    <td align="center"><strong>Contributions (12m)</strong><br/>${lastYear}</td>`,
+    "  </tr>",
+    "</table>",
+    "",
+    `<sub>Last updated: ${updatedAt}</sub>`,
+  ].join("\n");
 }
 
 function generateAnalyticsSection(metrics) {
   const user = metrics.user || {};
   const languages = Array.isArray(metrics.topLanguages) ? metrics.topLanguages : [];
 
-  let markdown = "| Metric | Value |\n";
-  markdown += "|---|---|\n";
-  markdown += `| Profile | [${user.login || "N/A"}](${user.profileUrl || "#"}) |\n`;
-  markdown += `| Followers | ${user.followers ?? "N/A"} |\n`;
-  markdown += `| Following | ${user.following ?? "N/A"} |\n`;
-  markdown += `| Public Repositories | ${user.publicRepos ?? "N/A"} |\n`;
-  markdown += `| Public Gists | ${user.publicGists ?? "N/A"} |\n`;
-  markdown += `| Total Stars (owned repos) | ${user.totalStars ?? "N/A"} |\n`;
-  markdown += `| Total Forks (owned repos) | ${user.totalForks ?? "N/A"} |\n`;
-  markdown += `| Account Created | ${(user.createdAt || "N/A").slice(0, 10)} |\n`;
-  markdown += `| Last Updated (UTC) | ${(metrics.generatedAt || "N/A").slice(0, 19)} |\n\n`;
+  let markdown = "<table>\n";
+  markdown += "  <tr><td><strong>Profile</strong></td>";
+  markdown += `<td><a href="${escapeHtml(user.profileUrl || "#")}">${escapeHtml(user.login || "N/A")}</a></td></tr>\n`;
+  markdown += `  <tr><td><strong>Following</strong></td><td>${user.following ?? 0}</td></tr>\n`;
+  markdown += `  <tr><td><strong>Public Gists</strong></td><td>${user.publicGists ?? 0}</td></tr>\n`;
+  markdown += `  <tr><td><strong>Total Stars (owned repos)</strong></td><td>${user.totalStars ?? 0}</td></tr>\n`;
+  markdown += `  <tr><td><strong>Total Forks (owned repos)</strong></td><td>${user.totalForks ?? 0}</td></tr>\n`;
+  markdown += `  <tr><td><strong>Account Created</strong></td><td>${formatDate(user.createdAt || "")}</td></tr>\n`;
+  markdown += "</table>\n\n";
 
-  markdown += "Top Languages (by repository count)\n\n";
-  markdown += "| Language | Repositories |\n";
-  markdown += "|---|---|\n";
+  markdown += "**Top Languages (by repository count)**\n\n";
   if (languages.length === 0) {
-    markdown += "| N/A | 0 |\n";
+    markdown += "`N/A: 0`\n";
   } else {
-    languages.forEach((item) => {
-      markdown += `| ${item.language} | ${item.repositories} |\n`;
-    });
+    markdown += languages
+      .map((item) => `\`${item.language}: ${item.repositories}\``)
+      .join(" ");
+    markdown += "\n";
   }
 
-  markdown += "\n_Source: GitHub REST API._\n";
-  return markdown;
+  markdown += "\n<sub>Source: GitHub REST API.</sub>\n";
+  return markdown.trimEnd();
+}
+
+function buildSparkline(series) {
+  const points = Array.isArray(series) ? series : [];
+  if (points.length === 0) {
+    return "";
+  }
+
+  const levels = [".", ":", "-", "=", "#"];
+  const max = Math.max(...points.map((item) => item.count || 0), 1);
+
+  return points
+    .map((item) => {
+      const count = item.count || 0;
+      const index = Math.round((count / max) * (levels.length - 1));
+      return levels[index];
+    })
+    .join("");
+}
+
+function buildHeatmapRows(weeks) {
+  const lastWeeks = weeks.slice(-16);
+  const levelChar = {
+    NONE: ".",
+    FIRST_QUARTILE: "-",
+    SECOND_QUARTILE: "=",
+    THIRD_QUARTILE: "#",
+    FOURTH_QUARTILE: "@",
+  };
+  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return weekdays.map((label, dayIndex) => {
+    const trend = lastWeeks
+      .map((week) => {
+        const day = week.contributionDays?.[dayIndex];
+        return levelChar[day?.contributionLevel] || ".";
+      })
+      .join("");
+    return `${label}  ${trend}`;
+  });
 }
 
 function generateContributionActivitySection(metrics) {
@@ -58,22 +138,32 @@ function generateContributionActivitySection(metrics) {
   const eventTypes = Array.isArray(contribution.topEventTypes) ? contribution.topEventTypes : [];
   const totalYear = contribution.totalContributionsLastYear ?? 0;
   const last30 = contribution.totalContributionsLast30Days ?? 0;
+  const sparkline = buildSparkline(series);
+  const recentSeries = series.slice(-14);
 
-  let markdown = `Total Contributions (Last 12 Months): **${totalYear}**  \n`;
-  markdown += `Total Contributions (Last 30 Days): **${last30}**\n\n`;
-  markdown += `Daily trend (last ${contribution.days || 30} days)\n\n`;
-  markdown += "| Date | Contributions | Trend |\n";
-  markdown += "|---|---:|---|\n";
+  let markdown = `**Contributions (12m):** ${totalYear}  \n`;
+  markdown += `**Contributions (30d):** ${last30}\n\n`;
 
-  if (series.length === 0) {
-    markdown += "| N/A | 0 | |\n";
+  if (sparkline) {
+    markdown += `\`${sparkline}\`\n\n`;
+    markdown += "<sub>Trend line for recent days (`.` low -> `#` high).</sub>\n\n";
+  }
+
+  markdown += "<details>\n";
+  markdown += "<summary>Daily breakdown (last 14 days)</summary>\n\n";
+  markdown += "| Date | Contributions |\n";
+  markdown += "|---|---:|\n";
+
+  if (recentSeries.length === 0) {
+    markdown += "| N/A | 0 |\n";
   } else {
-    series.forEach((item) => {
-      markdown += `| ${item.date} | ${item.count} | ${item.bar || "."} |\n`;
+    recentSeries.forEach((item) => {
+      markdown += `| ${item.date} | ${item.count} |\n`;
     });
   }
 
-  markdown += "\nTop Event Types (latest public events)\n\n";
+  markdown += "\n</details>\n\n";
+  markdown += "**Top Event Types (latest public events)**\n\n";
   markdown += "| Event Type | Count |\n";
   markdown += "|---|---:|\n";
   if (eventTypes.length === 0) {
@@ -84,8 +174,8 @@ function generateContributionActivitySection(metrics) {
     });
   }
 
-  markdown += "\n_Source: GitHub GraphQL + GitHub REST API._\n";
-  return markdown;
+  markdown += "\n<sub>Source: GitHub GraphQL + GitHub REST API.</sub>\n";
+  return markdown.trimEnd();
 }
 
 function generateContributionGraphSection(metrics) {
@@ -96,34 +186,15 @@ function generateContributionGraphSection(metrics) {
     return "_Contribution graph data is not available yet._\n";
   }
 
-  const lastWeeks = weeks.slice(-12);
-  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const levelChar = {
-    NONE: ".",
-    FIRST_QUARTILE: "-",
-    SECOND_QUARTILE: "=",
-    THIRD_QUARTILE: "#",
-    FOURTH_QUARTILE: "@",
-  };
-
-  const rows = weekdays.map((label, dayIndex) => {
-    let trend = "";
-    lastWeeks.forEach((week) => {
-      const day = week.contributionDays?.[dayIndex];
-      trend += levelChar[day?.contributionLevel] || ".";
-    });
-    return { label, trend };
-  });
-
-  let markdown = "GitHub contribution heatmap (last 12 weeks)\n\n";
-  markdown += "| Day | Pattern |\n";
-  markdown += "|---|---|\n";
+  const rows = buildHeatmapRows(weeks);
+  let markdown = "```text\n";
   rows.forEach((row) => {
-    markdown += `| ${row.label} | \`${row.trend}\` |\n`;
+    markdown += `${row}\n`;
   });
-  markdown += "\nLegend: `.` none, `-` low, `=` medium, `#` high, `@` very high\n";
-  markdown += "\n_Source: GitHub GraphQL contributions calendar._\n";
-  return markdown;
+  markdown += "```\n\n";
+  markdown += "Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high\n\n";
+  markdown += "<sub>Source: GitHub GraphQL contribution calendar (last 16 weeks).</sub>\n";
+  return markdown.trimEnd();
 }
 
 function generateProjectStatsSection(stats) {
@@ -133,14 +204,19 @@ function generateProjectStatsSection(stats) {
     return "_No public repositories available for stats yet._\n";
   }
 
-  let markdown = "| Project | Stars | Forks | Language |\n";
-  markdown += "|---|---:|---:|---|\n";
+  let markdown = "<table>\n";
   entries.forEach(([repo, data]) => {
-    markdown += `| [${repo}](${data.url}) | ${data.stars} | ${data.forks} | ${data.language} |\n`;
+    const updated = formatDate(data.updated || "");
+    markdown += "  <tr>\n";
+    markdown += "    <td>\n";
+    markdown += `      <strong><a href="${escapeHtml(data.url || "#")}">${escapeHtml(repo)}</a></strong><br/>\n`;
+    markdown += `      ${escapeHtml(data.language || "N/A")} | Stars ${data.stars ?? 0} | Forks ${data.forks ?? 0} | Watchers ${data.watchers ?? 0} | Updated ${updated}\n`;
+    markdown += "    </td>\n";
+    markdown += "  </tr>\n";
   });
-
-  markdown += "\n_Source: GitHub REST API._\n";
-  return markdown;
+  markdown += "</table>\n\n";
+  markdown += "<sub>Source: GitHub REST API.</sub>\n";
+  return markdown.trimEnd();
 }
 
 function loadJson(path, fallback) {
@@ -155,6 +231,13 @@ function main() {
     const metrics = loadJson(METRICS_DATA, {});
     const stats = loadJson(STATS_DATA, {});
     let readme = fs.readFileSync(README_PATH, "utf8");
+
+    readme = updateSection(
+      readme,
+      "<!-- HERO-KPI:START -->",
+      "<!-- HERO-KPI:END -->",
+      generateHeroKpiSection(metrics)
+    );
 
     readme = updateSection(
       readme,
