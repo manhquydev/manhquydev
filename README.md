@@ -64,7 +64,7 @@ My focus is clean architecture, reliable backend services, and maintainable fron
   </tr>
 </table>
 
-<sub>Last updated: 2026-04-02 11:14:53 UTC</sub>
+<sub>Last updated: 2026-04-02 11:22:55 UTC</sub>
 <!-- HERO-KPI:END -->
 
 <details open>
@@ -103,19 +103,15 @@ pie showData
 <summary><strong>Contribution Graph</strong></summary>
 
 <!-- CONTRIBUTION-GRAPH:START -->
-```text
-Sun  ........=.......
-Mon  ................
-Tue  ....-..........-
-Wed  ......=........-
-Thu  ...............@
-Fri  ................
-Sat  .=..............
-```
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/readme/contribution-heatmap-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/readme/contribution-heatmap-light.svg">
+    <img alt="Contribution Heatmap" src="./assets/readme/contribution-heatmap-light.svg" width="100%">
+  </picture>
+</div>
 
-Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high
-
-<sub>Source: GitHub GraphQL contribution calendar (last 16 weeks).</sub>
+<sub>Intensity scale reflects GitHub contribution levels from low to high.</sub>
 <!-- CONTRIBUTION-GRAPH:END -->
 
 </details>
@@ -127,7 +123,7 @@ Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high
 **Contributions (12m):** 80  
 **Contributions (30d):** 16
 
-`.............................#`
+`............................:#`
 
 <sub>Trend line for recent days (`.` low -> `#` high).</sub>
 
@@ -147,8 +143,8 @@ Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high
 | 2026-03-28 | 0 |
 | 2026-03-29 | 0 |
 | 2026-03-30 | 0 |
-| 2026-03-31 | 1 |
-| 2026-04-01 | 1 |
+| 2026-03-31 | 0 |
+| 2026-04-01 | 2 |
 | 2026-04-02 | 14 |
 
 </details>
