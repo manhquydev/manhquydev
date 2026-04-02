@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Catppuccin Latte (Light) Colors -->
+    <linearGradient id="hero-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e66f5">
+        <animate attributeName="stop-color" values="#1e66f5;#8839ef;#1e66f5" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#04a5e5"/>
+    </linearGradient>
+    
+    <!-- Glassmorphism fill -->
+    <linearGradient id="glass-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#eff1f5" stop-opacity="0.4"/>
+    </linearGradient>
+    
+    <!-- Glass border -->
+    <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ccd0da" stop-opacity="0.3"/>
+    </linearGradient>
+    
+    <!-- Blur filter for glass effect -->
+    <filter id="glass-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+    </filter>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="400" fill="#eff1f5"/>
+  
+  <!-- Decorative gradient orbs -->
+  <circle cx="1000" cy="150" r="180" fill="url(#hero-grad)" opacity="0.15" filter="url(#glow)">
+    <animateTransform attributeName="transform" type="scale" values="1;1.08;1" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="900" cy="250" r="100" fill="#8839ef" opacity="0.1" filter="url(#glow)">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 20,-10; 0,0" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Glass nameplate card -->
+  <g transform="translate(60, 100)">
+    <!-- Blur backdrop -->
+    <rect x="-10" y="-10" width="540" height="220" rx="28" fill="#dce0e8" opacity="0.3" filter="url(#glass-blur)"/>
+    <!-- Main card -->
+    <rect width="520" height="200" rx="24" fill="url(#glass-fill)" stroke="url(#glass-border)" stroke-width="1.5"/>
+    <!-- Subtle top highlight -->
+    <rect x="12" y="8" width="496" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
+    
+    <!-- Content -->
+    <text x="40" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#5c5f77" font-weight="500">Hello, I'm</text>
+    <text x="40" y="130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="56" font-weight="800" fill="#4c4f69">Manh Quy</text>
+    <text x="40" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#6c6f85">Full-Stack Developer</text>
+    
+    <!-- Animated accent line -->
+    <rect x="40" y="145" width="0" height="4" rx="2" fill="#1e66f5">
+      <animate attributeName="width" from="0" to="120" dur="0.8s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    </rect>
+  </g>
+  
+  <!-- Right side decorative elements -->
+  <g transform="translate(750, 80)">
+    <!-- Code brackets decoration -->
+    <text x="0" y="120" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="140" fill="#1e66f5" opacity="0.1" font-weight="300">&lt;/&gt;</text>
+    
+    <!-- Floating dots -->
+    <circle cx="300" cy="50" r="8" fill="#8839ef" opacity="0.4">
+      <animate attributeName="cy" values="50;30;50" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="150" r="6" fill="#04a5e5" opacity="0.4">
+      <animate attributeName="cy" values="150;170;150" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="220" r="10" fill="#1e66f5" opacity="0.3">
+      <animate attributeName="cy" values="220;200;220" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Bottom gradient line -->
+  <rect x="0" y="396" width="1200" height="4" fill="url(#hero-grad)" opacity="0.6"/>
+</svg>

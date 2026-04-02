@@ -1,0 +1,99 @@
+<svg viewBox="0 0 1200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Catppuccin Latte Colors -->
+    <linearGradient id="bar-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#e6e9ef" stop-opacity="0.4"/>
+    </linearGradient>
+    
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e66f5"/>
+      <stop offset="50%" stop-color="#8839ef"/>
+      <stop offset="100%" stop-color="#04a5e5"/>
+    </linearGradient>
+    
+    <filter id="glass-blur" x="-5%" y="-10%" width="110%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+    </filter>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="80" fill="#eff1f5"/>
+  
+  <!-- Glass bar container -->
+  <g transform="translate(60, 15)">
+    <rect x="-6" y="-6" width="1092" height="62" rx="16" fill="#dce0e8" opacity="0.4" filter="url(#glass-blur)"/>
+    <rect width="1080" height="50" rx="12" fill="url(#bar-bg)" stroke="#ccd0da" stroke-width="1"/>
+    
+    <!-- Top highlight -->
+    <rect x="10" y="6" width="1060" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
+    
+    <!-- Left accent -->
+    <rect x="0" y="0" width="4" height="50" rx="2" fill="url(#accent-grad)"/>
+    
+    <!-- Contact Items -->
+    <g transform="translate(40, 15)">
+      <!-- Website -->
+      <g transform="translate(0, 0)">
+        <circle r="12" fill="#1e66f5" opacity="0.15"/>
+        <path d="M8 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z" fill="#1e66f5" opacity="0.7" transform="translate(-8,-8) scale(1)"/>
+        <text x="22" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#4c4f69" font-weight="500">Website</text>
+        <text x="22" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#6c6f85">manhquy.dev</text>
+      </g>
+      
+      <!-- Divider -->
+      <line x1="130" y1="0" x2="130" y2="25" stroke="#ccd0da" stroke-width="1"/>
+      
+      <!-- LinkedIn -->
+      <g transform="translate(160, 0)">
+        <circle r="12" fill="#1e66f5" opacity="0.15"/>
+        <rect x="-4" y="-6" width="8" height="6" rx="1" fill="#1e66f5" opacity="0.7"/>
+        <rect x="-4" y="0" width="8" height="6" rx="1" fill="#1e66f5" opacity="0.7"/>
+        <text x="22" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#4c4f69" font-weight="500">LinkedIn</text>
+        <text x="22" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#6c6f85">/in/manhquy</text>
+      </g>
+      
+      <!-- Divider -->
+      <line x1="290" y1="0" x2="290" y2="25" stroke="#ccd0da" stroke-width="1"/>
+      
+      <!-- Email -->
+      <g transform="translate(320, 0)">
+        <circle r="12" fill="#8839ef" opacity="0.15"/>
+        <rect x="-6" y="-4" width="12" height="8" rx="1" stroke="#8839ef" stroke-width="1.5" fill="none" opacity="0.7"/>
+        <path d="M-6-4l6 4 6-4" stroke="#8839ef" stroke-width="1.5" fill="none" opacity="0.7"/>
+        <text x="22" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#4c4f69" font-weight="500">Email</text>
+        <text x="22" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#6c6f85">hello@manhquy.dev</text>
+      </g>
+      
+      <!-- Divider -->
+      <line x1="480" y1="0" x2="480" y2="25" stroke="#ccd0da" stroke-width="1"/>
+      
+      <!-- GitHub -->
+      <g transform="translate(510, 0)">
+        <circle r="12" fill="#4c4f69" opacity="0.15"/>
+        <path d="M-6-2a6 6 0 0 0-2 11.3v1.7c0 .5.4 1 1 1h2c.5 0 1-.5 1-1v-1h-2v-1.3A6 6 0 0 0-6-2z" fill="#4c4f69" opacity="0.7" transform="translate(0,-4)"/>
+        <text x="22" y="5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#4c4f69" font-weight="500">GitHub</text>
+        <text x="22" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#6c6f85">@manhquy</text>
+      </g>
+      
+      <!-- Right side status -->
+      <g transform="translate(800, 5)">
+        <circle r="4" fill="#40a02b">
+          <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <text x="15" y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#40a02b" font-weight="500">Open to work</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Bottom gradient line -->
+  <rect x="60" y="77" width="1080" height="3" rx="1.5" fill="url(#accent-grad)" opacity="0.6"/>
+</svg>

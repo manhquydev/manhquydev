@@ -1,0 +1,26 @@
+{
+  "name": "github-profile-generators",
+  "version": "1.0.0",
+  "description": "SVG generators for GitHub premium profile",
+  "main": "index.js",
+  "scripts": {
+    "generate": "npm run generate:hero && npm run generate:stats && npm run generate:tech && npm run generate:work-focus && npm run generate:contact",
+    "generate:hero": "node generate-premium-hero.js",
+    "generate:stats": "node generate-premium-stats.js",
+    "generate:tech": "node generate-premium-tech.js",
+    "generate:work-focus": "node generate-premium-work-focus.js",
+    "generate:contact": "node generate-premium-contact.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "profile",
+    "svg",
+    "generator"
+  ],
+  "author": "Manh Quy",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

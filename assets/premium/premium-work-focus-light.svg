@@ -1,0 +1,130 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Catppuccin Latte Colors -->
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e6e9ef" stop-opacity="0.5"/>
+    </linearGradient>
+    
+    <linearGradient id="accent-grad-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e66f5"/>
+      <stop offset="100%" stop-color="#04a5e5"/>
+    </linearGradient>
+    
+    <linearGradient id="accent-grad-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8839ef"/>
+      <stop offset="100%" stop-color="#ea76cb"/>
+    </linearGradient>
+    
+    <filter id="glass-blur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="300" fill="#eff1f5"/>
+  
+  <!-- Section Title -->
+  <text x="60" y="45" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#4c4f69">Focus Areas</text>
+  <rect x="60" y="57" width="30" height="3" rx="1.5" fill="#8839ef"/>
+  
+  <!-- Card 1: Domain Focus -->
+  <g transform="translate(60, 90)">
+    <!-- Glass blur backdrop -->
+    <rect x="-6" y="-6" width="542" height="172" rx="22" fill="#dce0e8" opacity="0.4" filter="url(#glass-blur)"/>
+    <!-- Main card -->
+    <rect width="530" height="160" rx="16" fill="url(#card-bg)" stroke="#ccd0da" stroke-width="1"/>
+    <!-- Accent top bar -->
+    <rect x="0" y="0" width="530" height="4" rx="2" fill="url(#accent-grad-1)"/>
+    <!-- Top highlight -->
+    <rect x="12" y="8" width="506" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
+    
+    <!-- Icon -->
+    <g transform="translate(30, 40)">
+      <circle r="25" fill="#1e66f5" opacity="0.1" filter="url(#glow)"/>
+      <path d="M12 12l-8 8 8 8m16-16l8 8-8 8" stroke="#1e66f5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    
+    <!-- Content -->
+    <text x="75" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#4c4f69">Domain Focus</text>
+    <text x="75" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6c6f85">Web Applications • API Development • Cloud Infrastructure</text>
+    
+    <!-- Tags -->
+    <g transform="translate(75, 120)">
+      <rect width="80" height="24" rx="12" fill="#1e66f5" opacity="0.1"/>
+      <text x="40" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#1e66f5" text-anchor="middle" font-weight="500">SaaS</text>
+      
+      <g transform="translate(90, 0)">
+        <rect width="90" height="24" rx="12" fill="#04a5e5" opacity="0.1"/>
+        <text x="45" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#04a5e5" text-anchor="middle" font-weight="500">Fintech</text>
+      </g>
+      
+      <g transform="translate(190, 0)">
+        <rect width="100" height="24" rx="12" fill="#8839ef" opacity="0.1"/>
+        <text x="50" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8839ef" text-anchor="middle" font-weight="500">E-commerce</text>
+      </g>
+    </g>
+    
+    <!-- Decorative animated dots -->
+    <circle cx="480" cy="40" r="6" fill="#1e66f5" opacity="0.3">
+      <animate attributeName="cy" values="40;30;40" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="70" r="4" fill="#04a5e5" opacity="0.4">
+      <animate attributeName="cy" values="70;80;70" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Card 2: Delivery Focus -->
+  <g transform="translate(610, 90)">
+    <!-- Glass blur backdrop -->
+    <rect x="-6" y="-6" width="542" height="172" rx="22" fill="#dce0e8" opacity="0.4" filter="url(#glass-blur)"/>
+    <!-- Main card -->
+    <rect width="530" height="160" rx="16" fill="url(#card-bg)" stroke="#ccd0da" stroke-width="1"/>
+    <!-- Accent top bar -->
+    <rect x="0" y="0" width="530" height="4" rx="2" fill="url(#accent-grad-2)"/>
+    <!-- Top highlight -->
+    <rect x="12" y="8" width="506" height="2" rx="1" fill="#ffffff" opacity="0.6"/>
+    
+    <!-- Icon -->
+    <g transform="translate(30, 40)">
+      <circle r="25" fill="#8839ef" opacity="0.1" filter="url(#glow)"/>
+      <path d="M12 4v16M4 12h16" stroke="#8839ef" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Content -->
+    <text x="75" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#4c4f69">Delivery Focus</text>
+    <text x="75" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" fill="#6c6f85">Performance • Scalability • Maintainability</text>
+    
+    <!-- Tags -->
+    <g transform="translate(75, 120)">
+      <rect width="90" height="24" rx="12" fill="#8839ef" opacity="0.1"/>
+      <text x="45" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8839ef" text-anchor="middle" font-weight="500">Performance</text>
+      
+      <g transform="translate(100, 0)">
+        <rect width="80" height="24" rx="12" fill="#ea76cb" opacity="0.1"/>
+        <text x="40" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#ea76cb" text-anchor="middle" font-weight="500">Testing</text>
+      </g>
+      
+      <g transform="translate(190, 0)">
+        <rect width="100" height="24" rx="12" fill="#40a02b" opacity="0.1"/>
+        <text x="50" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#40a02b" text-anchor="middle" font-weight="500">CI/CD</text>
+      </g>
+    </g>
+    
+    <!-- Decorative animated dots -->
+    <circle cx="480" cy="120" r="6" fill="#8839ef" opacity="0.3">
+      <animate attributeName="cy" values="120;110;120" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="500" cy="90" r="4" fill="#ea76cb" opacity="0.4">
+      <animate attributeName="cy" values="90;100;90" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

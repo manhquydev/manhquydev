@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <!-- Import filters from effects/filters.svg -->
+    <filter id="glass-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" 
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.7 0" result="glass"/>
+    </filter>
+
+    <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+
+    <filter id="glow-primary" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Card Gradient - Light Mode -->
+    <linearGradient id="card-gradient-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Card Gradient - Dark Mode -->
+    <linearGradient id="card-gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#313244" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#313244" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Primary Gradient -->
+    <linearGradient id="primary-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e66f5"/>
+      <stop offset="100%" stop-color="#8839ef"/>
+    </linearGradient>
+
+    <!-- Primary Gradient - Dark -->
+    <linearGradient id="primary-gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#89b4fa"/>
+      <stop offset="100%" stop-color="#cba6f7"/>
+    </linearGradient>
+
+    <!-- Clip path for card content -->
+    <clipPath id="card-clip">
+      <rect x="20" y="20" width="360" height="160" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background for demo (light mode) -->
+  <rect width="400" height="200" fill="#eff1f5"/>
+
+  <!-- Decorative background elements -->
+  <circle cx="80" cy="60" r="100" fill="#1e66f5" opacity="0.08">
+    <animate attributeName="r" values="100;110;100" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="160" r="80" fill="#8839ef" opacity="0.08">
+    <animate attributeName="r" values="80;90;80" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Main Glass Card -->
+  <g filter="url(#drop-shadow)">
+    <!-- Glass background -->
+    <rect x="20" y="20" width="360" height="160" rx="16" 
+          fill="url(#card-gradient-light)" 
+          stroke="#ffffff" 
+          stroke-width="1" 
+          stroke-opacity="0.5"/>
+    
+    <!-- Inner border glow -->
+    <rect x="20" y="20" width="360" height="160" rx="16" 
+          fill="none" 
+          stroke="url(#primary-gradient)" 
+          stroke-width="1.5" 
+          stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Card Content -->
+  <g clip-path="url(#card-clip)">
+    <!-- Header icon -->
+    <circle cx="56" cy="56" r="20" fill="url(#primary-gradient)" filter="url(#glow-primary)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="56" y="62" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">★</text>
+
+    <!-- Title -->
+    <text x="88" y="50" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+          font-size="20" font-weight="600" fill="#4c4f69">
+      Premium Profile
+      <animate attributeName="opacity" values="0;1" dur="0.5s" fill="freeze"/>
+    </text>
+
+    <!-- Subtitle -->
+    <text x="88" y="72" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+          font-size="14" fill="#6c6f85">
+      Glassmorphism Design System
+      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.2s" fill="freeze"/>
+    </text>
+
+    <!-- Divider -->
+    <line x1="40" y1="96" x2="360" y2="96" stroke="#4c4f69" stroke-width="1" stroke-opacity="0.1"/>
+
+    <!-- Stats Row -->
+    <g transform="translate(40, 112)">
+      <!-- Stat 1 -->
+      <text x="0" y="20" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="24" font-weight="700" fill="url(#primary-gradient)">
+        <tspan>
+          <animate attributeName="textContent" values="0;12" dur="1s" fill="freeze" 
+                   calcMode="spline" keySplines="0.4 0 0.2 1"/>
+        </tspan>
+      </text>
+      <text x="0" y="38" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="12" fill="#6c6f85">Components</text>
+
+      <!-- Stat 2 -->
+      <text x="100" y="20" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="24" font-weight="700" fill="url(#primary-gradient)">
+        <tspan>
+          <animate attributeName="textContent" values="0;8" dur="1s" begin="0.1s" fill="freeze" 
+                   calcMode="spline" keySplines="0.4 0 0.2 1"/>
+        </tspan>
+      </text>
+      <text x="100" y="38" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="12" fill="#6c6f85">Effects</text>
+
+      <!-- Stat 3 -->
+      <text x="200" y="20" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="24" font-weight="700" fill="url(#primary-gradient)">
+        <tspan>
+          <animate attributeName="textContent" values="0;2" dur="1s" begin="0.2s" fill="freeze" 
+                   calcMode="spline" keySplines="0.4 0 0.2 1"/>
+        </tspan>
+      </text>
+      <text x="200" y="38" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="12" fill="#6c6f85">Themes</text>
+
+      <!-- Stat 4 -->
+      <text x="290" y="20" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="24" font-weight="700" fill="url(#primary-gradient)">
+        <tspan>
+          <animate attributeName="textContent" values="0;100" dur="1s" begin="0.3s" fill="freeze" 
+                   calcMode="spline" keySplines="0.4 0 0.2 1"/>
+        </tspan>
+        <tspan font-size="14" font-weight="500">%</tspan>
+      </text>
+      <text x="290" y="38" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="12" fill="#6c6f85">Satisfaction</text>
+    </g>
+
+    <!-- Progress bars -->
+    <g transform="translate(40, 156)">
+      <text x="0" y="12" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="11" fill="#6c6f85">Glass Quality</text>
+      
+      <!-- Background bar -->
+      <rect x="80" y="4" width="200" height="8" rx="4" fill="#4c4f69" fill-opacity="0.1"/>
+      
+      <!-- Progress bar -->
+      <rect x="80" y="4" width="0" height="8" rx="4" fill="url(#primary-gradient)">
+        <animate attributeName="width" values="0;190" dur="1.5s" fill="freeze" 
+                 calcMode="spline" keySplines="0.4 0 0.2 1"/>
+      </rect>
+      
+      <text x="290" y="12" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+            font-size="11" fill="#4c4f69" font-weight="600">
+        <tspan>
+          <animate attributeName="textContent" values="0;95" dur="1.5s" fill="freeze" 
+                   calcMode="spline" keySplines="0.4 0 0.2 1"/>
+        </tspan>
+        %
+      </text>
+    </g>
+  </g>
+
+  <!-- Mode indicator -->
+  <circle cx="370" cy="40" r="8" fill="#eff1f5" stroke="#4c4f69" stroke-width="1" stroke-opacity="0.2">
+    <animate attributeName="fill" values="#eff1f5;#1e1e2e;#eff1f5" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="370" y="44" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" 
+        font-size="8" font-weight="600" fill="#4c4f69" text-anchor="middle">
+    <animate attributeName="fill" values="#4c4f69;#cdd6f4;#4c4f69" dur="4s" repeatCount="indefinite"/>
+    L/D
+  </text>
+</svg>

@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="0" height="0">
+  <defs>
+    <!-- 
+      Premium Glassmorphism Filters
+      
+      Usage:
+      <rect filter="url(#glass-blur)" ... />
+      <circle filter="url(#glow-primary)" ... />
+    -->
+
+    <!-- Glassmorphism Blur Filter -->
+    <filter id="glass-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" 
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.7 0" result="glass"/>
+      <feComposite in="SourceGraphic" in2="glass" operator="over"/>
+    </filter>
+
+    <!-- Light Glassmorphism (softer) -->
+    <filter id="glass-blur-light" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" 
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.5 0" result="glass"/>
+      <feComposite in="SourceGraphic" in2="glass" operator="over"/>
+    </filter>
+
+    <!-- Strong Glassmorphism (heavier blur) -->
+    <filter id="glass-blur-strong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" 
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.85 0" result="glass"/>
+      <feComposite in="SourceGraphic" in2="glass" operator="over"/>
+    </filter>
+
+    <!-- Glow - Primary (Blue) -->
+    <filter id="glow-primary" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feFlood flood-color="#1e66f5" flood-opacity="0.5" result="glowColor"/>
+      <feComposite in="glowColor" in2="coloredBlur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow - Primary Dark Mode (Light Blue) -->
+    <filter id="glow-primary-dark" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feFlood flood-color="#89b4fa" flood-opacity="0.5" result="glowColor"/>
+      <feComposite in="glowColor" in2="coloredBlur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow - Secondary (Purple) -->
+    <filter id="glow-secondary" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feFlood flood-color="#8839ef" flood-opacity="0.5" result="glowColor"/>
+      <feComposite in="glowColor" in2="coloredBlur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow - Accent (Orange) -->
+    <filter id="glow-accent" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feFlood flood-color="#fe640b" flood-opacity="0.5" result="glowColor"/>
+      <feComposite in="glowColor" in2="coloredBlur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow - Success (Green) -->
+    <filter id="glow-success" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feFlood flood-color="#40a02b" flood-opacity="0.5" result="glowColor"/>
+      <feComposite in="glowColor" in2="coloredBlur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Drop Shadow -->
+    <filter id="drop-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- Inner Shadow -->
+    <filter id="inner-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feOffset dx="0" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.1" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadow"/>
+      <feComposite in="shadow" in2="SourceAlpha" operator="in" result="innerShadow"/>
+      <feComposite in="SourceGraphic" in2="innerShadow" operator="over"/>
+    </filter>
+
+    <!-- Noise Texture (subtle grain) -->
+    <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0" result="grayNoise"/>
+      <feComponentTransfer in="grayNoise" result="alphaNoise">
+        <feFuncA type="linear" slope="0.03"/>
+      </feComponentTransfer>
+      <feComposite in="alphaNoise" in2="SourceGraphic" operator="over"/>
+    </filter>
+
+    <!-- ==================== GRADIENTS ==================== -->
+
+    <!-- Card Gradient - Light Mode -->
+    <linearGradient id="card-gradient-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Card Gradient - Dark Mode -->
+    <linearGradient id="card-gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#313244" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#313244" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Primary Gradient - Light -->
+    <linearGradient id="primary-gradient-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e66f5"/>
+      <stop offset="100%" stop-color="#8839ef"/>
+    </linearGradient>
+
+    <!-- Primary Gradient - Dark -->
+    <linearGradient id="primary-gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#89b4fa"/>
+      <stop offset="100%" stop-color="#cba6f7"/>
+    </linearGradient>
+
+    <!-- Accent Gradient -->
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fe640b"/>
+      <stop offset="100%" stop-color="#fab387"/>
+    </linearGradient>
+
+    <!-- Success Gradient -->
+    <linearGradient id="success-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#40a02b"/>
+      <stop offset="100%" stop-color="#a6e3a1"/>
+    </linearGradient>
+
+    <!-- Background Gradient - Light -->
+    <linearGradient id="bg-gradient-light" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eff1f5"/>
+      <stop offset="100%" stop-color="#e6e9ef"/>
+    </linearGradient>
+
+    <!-- Background Gradient - Dark -->
+    <linearGradient id="bg-gradient-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1e2e"/>
+      <stop offset="100%" stop-color="#181825"/>
+    </linearGradient>
+
+    <!-- Text Gradient - Light -->
+    <linearGradient id="text-gradient-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e66f5"/>
+      <stop offset="100%" stop-color="#8839ef"/>
+    </linearGradient>
+
+    <!-- Text Gradient - Dark -->
+    <linearGradient id="text-gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#89b4fa"/>
+      <stop offset="100%" stop-color="#cba6f7"/>
+    </linearGradient>
+
+    <!-- ==================== PATTERNS ==================== -->
+
+    <!-- Dot Pattern -->
+    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1.5" fill="currentColor" opacity="0.1"/>
+    </pattern>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+
+    <!-- Diagonal Lines -->
+    <pattern id="diagonal" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M -1 11 L 11 -1" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+
+  </defs>
+</svg>
