@@ -75,9 +75,7 @@ Open to     Freelance and full-time opportunities
 <!-- BLOG-POST-LIST:START -->
 ### Latest Blog Posts
 
-_Automated feed from Dev.to - updates daily via GitHub Actions._
-
-Check out my [website](https://www.manhquy.id.vn/) for more articles and updates.
+_No recent Dev.to posts found._
 <!-- BLOG-POST-LIST:END -->
 
 ---
@@ -87,7 +85,16 @@ Check out my [website](https://www.manhquy.id.vn/) for more articles and updates
 <!-- PROJECT-STATS:START -->
 ### Live Project Stats
 
-_Project statistics updated weekly via GitHub Actions._
+| Project | Stars | Forks | Language |
+|---------|-------|-------|----------|
+| [manhquydev](https://github.com/manhquydev/manhquydev) | 0 | 0 | JavaScript |
+| [rice-cooker-order-system](https://github.com/manhquydev/rice-cooker-order-system) | 0 | 0 | HTML |
+| [AI-Book-Weaver-new](https://github.com/manhquydev/AI-Book-Weaver-new) | 0 | 0 | TypeScript |
+| [WebCrawlerProject](https://github.com/manhquydev/WebCrawlerProject) | 0 | 0 | N/A |
+| [HTQL-SieuThi](https://github.com/manhquydev/HTQL-SieuThi) | 0 | 0 | C++ |
+| [phuoc](https://github.com/manhquydev/phuoc) | 0 | 0 | N/A |
+
+_Updated weekly via GitHub Actions._
 <!-- PROJECT-STATS:END -->
 
 ---

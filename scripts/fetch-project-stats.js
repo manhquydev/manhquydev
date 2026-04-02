@@ -1,86 +1,93 @@
-const https = require('https');
-const fs = require('fs');
+const https = require("https");
+const fs = require("fs");
 
-// Configuration
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const USERNAME = 'manhquydev';
-const REPOS = ['Python-Visualizer', 'student-forum-web', 'CodeVision_Academy'];
-const OUTPUT_FILE = 'data/project-stats.json';
+const USERNAME = process.env.GITHUB_USERNAME || "manhquydev";
+const MAX_REPOS = Number(process.env.MAX_PROJECT_STATS_REPOS || "6");
+const OUTPUT_FILE = "data/project-stats.json";
 
-/**
- * Fetch repository data from GitHub API
- * @param {string} owner - Repository owner username
- * @param {string} repo - Repository name
- * @returns {Promise<Object>} Repository data
- */
-async function fetchRepo(owner, repo) {
+function requestJson(path) {
   return new Promise((resolve, reject) => {
-    const options = {
-      hostname: 'api.github.com',
-      path: `/repos/${owner}/${repo}`,
-      headers: {
-        'User-Agent': 'GitHub-Profile-Updater',
-        'Authorization': `token ${GITHUB_TOKEN}`,
-        'Accept': 'application/vnd.github.v3+json'
-      }
+    const headers = {
+      "User-Agent": "manhquydev-readme-updater",
+      Accept: "application/vnd.github+json",
     };
 
-    https.get(options, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => {
-        try {
-          if (res.statusCode === 200) {
-            resolve(JSON.parse(data));
-          } else {
-            reject(new Error(`HTTP ${res.statusCode}: ${data}`));
+    if (GITHUB_TOKEN) {
+      headers.Authorization = `Bearer ${GITHUB_TOKEN}`;
+    }
+
+    const req = https.get(
+      {
+        hostname: "api.github.com",
+        path,
+        headers,
+      },
+      (res) => {
+        let raw = "";
+        res.on("data", (chunk) => {
+          raw += chunk;
+        });
+        res.on("end", () => {
+          if (res.statusCode !== 200) {
+            reject(new Error(`HTTP ${res.statusCode}: ${raw}`));
+            return;
           }
-        } catch (e) {
-          reject(e);
-        }
-      });
-      res.on('error', reject);
-    }).on('error', reject);
+
+          try {
+            resolve(JSON.parse(raw));
+          } catch (error) {
+            reject(error);
+          }
+        });
+      }
+    );
+
+    req.on("error", reject);
   });
 }
 
-/**
- * Main execution function
- */
+function selectRepos(repos) {
+  return repos
+    .filter((repo) => !repo.fork)
+    .sort((a, b) => {
+      if ((b.stargazers_count || 0) !== (a.stargazers_count || 0)) {
+        return (b.stargazers_count || 0) - (a.stargazers_count || 0);
+      }
+      return new Date(b.pushed_at || 0) - new Date(a.pushed_at || 0);
+    })
+    .slice(0, MAX_REPOS);
+}
+
 async function main() {
   try {
-    if (!GITHUB_TOKEN) {
-      throw new Error('GITHUB_TOKEN environment variable is required');
-    }
+    console.log(`Fetching repositories for ${USERNAME}...`);
+    const repos = await requestJson(
+      `/users/${encodeURIComponent(USERNAME)}/repos?type=owner&per_page=100&sort=updated`
+    );
 
+    const selected = selectRepos(Array.isArray(repos) ? repos : []);
     const stats = {};
 
-    for (const repo of REPOS) {
-      console.log(`Fetching stats for ${repo}...`);
-      const data = await fetchRepo(USERNAME, repo);
-
-      stats[repo] = {
-        stars: data.stargazers_count || 0,
-        forks: data.forks_count || 0,
-        watchers: data.watchers_count || 0,
-        language: data.language || 'N/A',
-        updated: data.updated_at,
-        url: data.html_url
+    selected.forEach((repo) => {
+      stats[repo.name] = {
+        stars: repo.stargazers_count || 0,
+        forks: repo.forks_count || 0,
+        watchers: repo.watchers_count || 0,
+        language: repo.language || "N/A",
+        updated: repo.updated_at,
+        url: repo.html_url,
       };
+    });
 
-      console.log(`  ⭐ ${stats[repo].stars} stars | 🍴 ${stats[repo].forks} forks`);
+    if (!fs.existsSync("data")) {
+      fs.mkdirSync("data", { recursive: true });
     }
 
-    // Ensure data directory exists
-    if (!fs.existsSync('data')) {
-      fs.mkdirSync('data', { recursive: true });
-    }
-
-    // Save stats to JSON file
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(stats, null, 2));
-    console.log(`✓ Project stats saved to ${OUTPUT_FILE}`);
+    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(stats, null, 2), "utf8");
+    console.log(`Saved ${Object.keys(stats).length} repository stat(s) to ${OUTPUT_FILE}`);
   } catch (error) {
-    console.error('✗ Error fetching project stats:', error.message);
+    console.error(`Error fetching project stats: ${error.message}`);
     process.exit(1);
   }
 }
