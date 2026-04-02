@@ -14,9 +14,11 @@
   <img src="https://komarev.com/ghpvc/?username=manhquydev&style=for-the-badge&color=7aa2f7&labelColor=1a1b26" alt="Profile Views" />
 </p>
 
+<!-- HERO-KPI:START -->
 <p align="center">
   <samp>📦 18 repos | 📝 82 contributions | 👥 2 followers</samp>
 </p>
+<!-- HERO-KPI:END -->
 
 ---
 
@@ -42,10 +44,18 @@
 
 ---
 
-<!-- Activity Graph -->
+<!-- GitHub Analytics -->
+## 📊 GitHub Analytics
+
+<!-- GITHUB-ANALYTICS:START -->
+<p align="center"><em>Loading GitHub analytics...</em></p>
+<!-- GITHUB-ANALYTICS:END -->
+
+---
+
 <!-- Contribution Details - Expanded -->
 <details open>
-<summary>📊 Contribution Details</summary>
+<summary>📈 Contribution Details</summary>
 
 <!-- CONTRIBUTION-GRAPH:START -->
 <div align="center">
@@ -56,6 +66,10 @@
 </div>
 <!-- CONTRIBUTION-GRAPH:END -->
 
+<!-- CONTRIBUTION-ACTIVITY:START -->
+<p align="center"><em>Loading contribution activity...</em></p>
+<!-- CONTRIBUTION-ACTIVITY:END -->
+
 ### 📈 Activity Graph
 
 <p align="center">
@@ -65,6 +79,15 @@
 </p>
 
 </details>
+
+---
+
+<!-- Project Stats -->
+## 📁 Project Statistics
+
+<!-- PROJECT-STATS:START -->
+<p align="center"><em>Loading project statistics...</em></p>
+<!-- PROJECT-STATS:END -->
 
 ---
 
@@ -110,4 +133,4 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer&animation=twinkling" alt="Wave footer" />
 </p>
 
-<sub>⚡ Profile auto-generated with GitHub Actions</sub>
+<sub>⚡ Contribution graph & stats auto-generated with GitHub Actions daily</sub>
