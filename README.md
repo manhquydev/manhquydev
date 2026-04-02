@@ -28,6 +28,14 @@ Full-Stack Developer focused on private EdTech systems.
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manhquydev&layout=compact&theme=transparent&hide_border=true" alt="Top languages" />
 </p>
 
+## Contribution Graph
+
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=manhquydev&theme=github-compact&hide_border=true&area=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+## Contribution Snake
+
+![Contribution Snake](https://raw.githubusercontent.com/manhquydev/manhquydev/output/github-contribution-grid-snake-dark.svg)
+
 ## Current Focus
 
 - Building scalable APIs, auth systems, and collaborative workflows.
