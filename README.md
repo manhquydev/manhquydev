@@ -44,17 +44,27 @@ My focus is clean architecture, reliable backend services, and maintainable fron
 
 ## GitHub Data (Real, GitHub API Only)
 
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/readme/github-dashboard-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/readme/github-dashboard-light.svg">
+    <img alt="GitHub Visual Dashboard" src="./assets/readme/github-dashboard-light.svg" width="100%">
+  </picture>
+</div>
+
+<sub>Visual dashboard is auto-generated from GitHub REST/GraphQL data.</sub>
+
 <!-- HERO-KPI:START -->
 <table>
   <tr>
     <td align="center"><strong>Followers</strong><br/>2</td>
     <td align="center"><strong>Public Repos</strong><br/>18</td>
-    <td align="center"><strong>Contributions (30d)</strong><br/>14</td>
-    <td align="center"><strong>Contributions (12m)</strong><br/>78</td>
+    <td align="center"><strong>Contributions (30d)</strong><br/>15</td>
+    <td align="center"><strong>Contributions (12m)</strong><br/>79</td>
   </tr>
 </table>
 
-<sub>Last updated: 2026-04-02 10:59:50 UTC</sub>
+<sub>Last updated: 2026-04-02 11:13:51 UTC</sub>
 <!-- HERO-KPI:END -->
 
 <details open>
@@ -94,13 +104,13 @@ pie showData
 
 <!-- CONTRIBUTION-GRAPH:START -->
 ```text
-Sun  ........@.......
+Sun  ........=.......
 Mon  ................
-Tue  ....-..........-
-Wed  ......@........-
+Tue  ................
+Wed  ....-.=........-
 Thu  ...............@
 Fri  ................
-Sat  .#..............
+Sat  .=..............
 ```
 
 Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high
@@ -114,10 +124,10 @@ Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high
 <summary><strong>Contribution Activity</strong></summary>
 
 <!-- CONTRIBUTION-ACTIVITY:START -->
-**Contributions (12m):** 78  
-**Contributions (30d):** 14
+**Contributions (12m):** 79  
+**Contributions (30d):** 15
 
-`.............................#`
+`............................:#`
 
 <sub>Trend line for recent days (`.` low -> `#` high).</sub>
 
@@ -137,9 +147,9 @@ Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high
 | 2026-03-28 | 0 |
 | 2026-03-29 | 0 |
 | 2026-03-30 | 0 |
-| 2026-03-31 | 1 |
-| 2026-04-01 | 1 |
-| 2026-04-02 | 12 |
+| 2026-03-31 | 0 |
+| 2026-04-01 | 2 |
+| 2026-04-02 | 13 |
 
 </details>
 
@@ -147,14 +157,14 @@ Legend: `.` none, `-` low, `=` medium, `#` high, `@` very high
 
 | Event Type | Count |
 |---|---:|
-| PushEvent | 12 |
+| PushEvent | 13 |
 | WatchEvent | 9 |
 | ForkEvent | 2 |
 
 ```mermaid
 pie showData
   title Public Event Type Mix
-  "PushEvent" : 11
+  "PushEvent" : 13
   "WatchEvent" : 9
   "ForkEvent" : 2
 ```

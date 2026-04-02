@@ -3,6 +3,9 @@
 const README_PATH = "README.md";
 const METRICS_DATA = "data/github-metrics.json";
 const STATS_DATA = "data/project-stats.json";
+const DASHBOARD_DIR = "assets/readme";
+const DASHBOARD_LIGHT = `${DASHBOARD_DIR}/github-dashboard-light.svg`;
+const DASHBOARD_DARK = `${DASHBOARD_DIR}/github-dashboard-dark.svg`;
 
 function updateSection(content, startMarker, endMarker, newContent) {
   if (!content.includes(startMarker) || !content.includes(endMarker)) {
@@ -38,6 +41,21 @@ function escapeHtml(value) {
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
+}
+
+function escapeXml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&apos;");
+}
+
+function ensureDirectory(path) {
+  if (!fs.existsSync(path)) {
+    fs.mkdirSync(path, { recursive: true });
+  }
 }
 
 function escapeMermaidLabel(value) {
@@ -166,6 +184,140 @@ function buildHeatmapRows(weeks) {
   });
 }
 
+function formatDateCompact(value) {
+  if (!value || !value.includes("T")) {
+    return formatDate(value);
+  }
+  return `${value.slice(0, 10)} ${value.slice(11, 16)} UTC`;
+}
+
+function buildSvgDashboard(metrics, theme) {
+  const user = metrics.user || {};
+  const contribution = metrics.contribution || {};
+  const languages = Array.isArray(metrics.topLanguages) ? metrics.topLanguages.slice(0, 5) : [];
+  const series = Array.isArray(contribution.series) ? contribution.series.slice(-14) : [];
+
+  const width = 1120;
+  const height = 560;
+
+  const cards = [
+    { label: "Followers", value: user.followers ?? 0 },
+    { label: "Public Repos", value: user.publicRepos ?? 0 },
+    { label: "Contrib (30d)", value: contribution.totalContributionsLast30Days ?? 0 },
+    { label: "Contrib (12m)", value: contribution.totalContributionsLastYear ?? 0 },
+  ];
+
+  const chartX = 48;
+  const chartY = 252;
+  const chartW = 670;
+  const chartH = 230;
+
+  const counts = series.map((item) => Number(item.count || 0));
+  const maxCount = Math.max(...counts, 1);
+  const barGap = 8;
+  const barW = Math.floor((chartW - barGap * (series.length - 1)) / Math.max(series.length, 1));
+
+  const langMax = Math.max(...languages.map((item) => Number(item.repositories || 0)), 1);
+  const updatedAt = formatDateCompact(metrics.generatedAt || "");
+
+  let svg = "";
+  svg += `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  svg += `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="GitHub visual dashboard">\n`;
+  svg += `  <defs>\n`;
+  svg += `    <linearGradient id="header-gradient" x1="0%" y1="0%" x2="100%" y2="0%">\n`;
+  svg += `      <stop offset="0%" stop-color="${theme.gradientA}" />\n`;
+  svg += `      <stop offset="100%" stop-color="${theme.gradientB}" />\n`;
+  svg += `    </linearGradient>\n`;
+  svg += `  </defs>\n`;
+  svg += `  <rect x="0" y="0" width="${width}" height="${height}" rx="18" fill="${theme.bg}" />\n`;
+  svg += `  <rect x="0" y="0" width="${width}" height="88" rx="18" fill="url(#header-gradient)" />\n`;
+  svg += `  <text x="38" y="54" fill="${theme.headerText}" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="30" font-weight="700">GitHub Visual Dashboard</text>\n`;
+  svg += `  <text x="${width - 340}" y="54" fill="${theme.headerText}" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="16">Updated: ${escapeXml(updatedAt)}</text>\n`;
+
+  const cardY = 116;
+  const cardW = 246;
+  const cardH = 110;
+  const cardGap = 22;
+  cards.forEach((card, index) => {
+    const x = 48 + index * (cardW + cardGap);
+    svg += `  <rect x="${x}" y="${cardY}" width="${cardW}" height="${cardH}" rx="14" fill="${theme.cardBg}" stroke="${theme.border}" />\n`;
+    svg += `  <text x="${x + 18}" y="${cardY + 36}" fill="${theme.muted}" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="15">${escapeXml(card.label)}</text>\n`;
+    svg += `  <text x="${x + 18}" y="${cardY + 80}" fill="${theme.text}" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="36" font-weight="700">${escapeXml(card.value)}</text>\n`;
+  });
+
+  svg += `  <text x="${chartX}" y="${chartY - 20}" fill="${theme.text}" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="20" font-weight="600">Contribution Trend (Last 14 Days)</text>\n`;
+  svg += `  <rect x="${chartX}" y="${chartY}" width="${chartW}" height="${chartH}" rx="12" fill="${theme.panel}" stroke="${theme.border}" />\n`;
+  svg += `  <line x1="${chartX + 18}" y1="${chartY + chartH - 28}" x2="${chartX + chartW - 18}" y2="${chartY + chartH - 28}" stroke="${theme.grid}" />\n`;
+  svg += `  <line x1="${chartX + 18}" y1="${chartY + 20}" x2="${chartX + 18}" y2="${chartY + chartH - 28}" stroke="${theme.grid}" />\n`;
+
+  series.forEach((item, idx) => {
+    const count = Number(item.count || 0);
+    const h = Math.round((count / maxCount) * (chartH - 62));
+    const x = chartX + 28 + idx * (barW + barGap);
+    const y = chartY + chartH - 30 - h;
+    svg += `  <rect x="${x}" y="${y}" width="${barW}" height="${Math.max(h, 2)}" rx="4" fill="${theme.accent}" />\n`;
+  });
+
+  const langX = 760;
+  const langY = 252;
+  const langW = 312;
+  const langH = 230;
+  svg += `  <text x="${langX}" y="${langY - 20}" fill="${theme.text}" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="20" font-weight="600">Top Languages</text>\n`;
+  svg += `  <rect x="${langX}" y="${langY}" width="${langW}" height="${langH}" rx="12" fill="${theme.panel}" stroke="${theme.border}" />\n`;
+
+  languages.forEach((item, idx) => {
+    const y = langY + 40 + idx * 36;
+    const barFull = 162;
+    const barSize = Math.round((Number(item.repositories || 0) / langMax) * barFull);
+    svg += `  <text x="${langX + 16}" y="${y}" fill="${theme.muted}" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="14">${escapeXml(item.language)}</text>\n`;
+    svg += `  <rect x="${langX + 132}" y="${y - 12}" width="${barFull}" height="14" rx="7" fill="${theme.gridSoft}" />\n`;
+    svg += `  <rect x="${langX + 132}" y="${y - 12}" width="${Math.max(barSize, 4)}" height="14" rx="7" fill="${theme.accentAlt}" />\n`;
+    svg += `  <text x="${langX + 300}" y="${y}" fill="${theme.text}" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="14" text-anchor="end">${escapeXml(item.repositories)}</text>\n`;
+  });
+
+  svg += `  <text x="48" y="528" fill="${theme.muted}" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13">Source: GitHub REST API + GitHub GraphQL</text>\n`;
+  svg += `</svg>\n`;
+  return svg;
+}
+
+function writeDashboardAssets(metrics) {
+  const lightTheme = {
+    bg: "#f8fafc",
+    panel: "#ffffff",
+    cardBg: "#ffffff",
+    border: "#d0d7de",
+    text: "#111827",
+    muted: "#6b7280",
+    accent: "#2563eb",
+    accentAlt: "#0ea5e9",
+    grid: "#d1d5db",
+    gridSoft: "#e5e7eb",
+    gradientA: "#1d4ed8",
+    gradientB: "#0f766e",
+    headerText: "#f8fafc",
+  };
+
+  const darkTheme = {
+    bg: "#0d1117",
+    panel: "#161b22",
+    cardBg: "#161b22",
+    border: "#30363d",
+    text: "#e6edf3",
+    muted: "#9aa4b2",
+    accent: "#58a6ff",
+    accentAlt: "#3fb950",
+    grid: "#30363d",
+    gridSoft: "#21262d",
+    gradientA: "#1f6feb",
+    gradientB: "#2ea043",
+    headerText: "#f8fafc",
+  };
+
+  ensureDirectory(DASHBOARD_DIR);
+  fs.writeFileSync(DASHBOARD_LIGHT, buildSvgDashboard(metrics, lightTheme), "utf8");
+  fs.writeFileSync(DASHBOARD_DARK, buildSvgDashboard(metrics, darkTheme), "utf8");
+}
+
 function generateContributionActivitySection(metrics) {
   const contribution = metrics.contribution || {};
   const series = Array.isArray(contribution.series) ? contribution.series : [];
@@ -273,6 +425,8 @@ function main() {
     const metrics = loadJson(METRICS_DATA, {});
     const stats = loadJson(STATS_DATA, {});
     let readme = fs.readFileSync(README_PATH, "utf8");
+
+    writeDashboardAssets(metrics);
 
     readme = updateSection(
       readme,
