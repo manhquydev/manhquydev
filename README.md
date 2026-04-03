@@ -15,9 +15,16 @@
 </p>
 
 <!-- HERO-KPI:START -->
-<p align="center">
-  <samp>📦 18 repos | 📝 82 contributions | 👥 2 followers</samp>
-</p>
+<table>
+  <tr>
+    <td align="center"><strong>Followers</strong><br/>2</td>
+    <td align="center"><strong>Public Repos</strong><br/>10</td>
+    <td align="center"><strong>Contributions (30d)</strong><br/>26</td>
+    <td align="center"><strong>Contributions (12m)</strong><br/>68</td>
+  </tr>
+</table>
+
+<sub>Last updated: 2026-04-03 05:03:42 UTC</sub>
 <!-- HERO-KPI:END -->
 
 ---
@@ -48,13 +55,26 @@
 ## 📊 GitHub Analytics
 
 <!-- GITHUB-ANALYTICS:START -->
-<p align="center">
-  <samp>Profile: <a href="https://github.com/manhquydev">manhquydev</a> | Following: 2 | Public Repos: 18</samp>
-</p>
+<table>
+  <tr><td><strong>Profile</strong></td><td><a href="https://github.com/manhquydev">manhquydev</a></td></tr>
+  <tr><td><strong>Following</strong></td><td>2</td></tr>
+  <tr><td><strong>Public Gists</strong></td><td>0</td></tr>
+  <tr><td><strong>Total Stars (owned repos)</strong></td><td>0</td></tr>
+  <tr><td><strong>Total Forks (owned repos)</strong></td><td>0</td></tr>
+  <tr><td><strong>Account Created</strong></td><td>2022-11-11</td></tr>
+</table>
 
-<p align="center">
-  <samp>Top Languages: JavaScript · TypeScript · HTML · C++ · Python</samp>
-</p>
+**Top Languages (by repository count)**
+
+`JavaScript: 1`
+
+```mermaid
+pie showData
+  title Top Languages by Repository Count
+  "JavaScript" : 1
+```
+
+<sub>Source: GitHub REST API.</sub>
 <!-- GITHUB-ANALYTICS:END -->
 
 ---
@@ -67,15 +87,61 @@
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/readme/contribution-heatmap-dark.svg">
-    <img src="./assets/readme/contribution-heatmap-light.svg" width="100%" alt="Contribution Heatmap">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/readme/contribution-heatmap-light.svg">
+    <img alt="Contribution Heatmap" src="./assets/readme/contribution-heatmap-light.svg" width="100%">
   </picture>
 </div>
+
+<sub>Intensity scale reflects GitHub contribution levels from low to high.</sub>
 <!-- CONTRIBUTION-GRAPH:END -->
 
 <!-- CONTRIBUTION-ACTIVITY:START -->
-<p align="center">
-  <samp>Contributions (12m): 83 | Contributions (30d): 19</samp>
-</p>
+**Contributions (12m):** 68  
+**Contributions (30d):** 26
+
+`............................#-`
+
+<sub>Trend line for recent days (`.` low -> `#` high).</sub>
+
+<details>
+<summary>Daily breakdown (last 14 days)</summary>
+
+| Date | Contributions |
+|---|---:|
+| 2026-03-21 | 0 |
+| 2026-03-22 | 0 |
+| 2026-03-23 | 0 |
+| 2026-03-24 | 0 |
+| 2026-03-25 | 0 |
+| 2026-03-26 | 0 |
+| 2026-03-27 | 0 |
+| 2026-03-28 | 0 |
+| 2026-03-29 | 0 |
+| 2026-03-30 | 0 |
+| 2026-03-31 | 1 |
+| 2026-04-01 | 1 |
+| 2026-04-02 | 17 |
+| 2026-04-03 | 7 |
+
+</details>
+
+**Top Event Types (latest public events)**
+
+| Event Type | Count |
+|---|---:|
+| PushEvent | 22 |
+| WatchEvent | 9 |
+| ForkEvent | 2 |
+
+```mermaid
+pie showData
+  title Public Event Type Mix
+  "PushEvent" : 22
+  "WatchEvent" : 9
+  "ForkEvent" : 2
+```
+
+<sub>Source: GitHub GraphQL + GitHub REST API.</sub>
 <!-- CONTRIBUTION-ACTIVITY:END -->
 
 ### 📈 Activity Graph
@@ -94,9 +160,16 @@
 ## 📁 Project Statistics
 
 <!-- PROJECT-STATS:START -->
-<p align="center">
-  <samp><a href="https://github.com/manhquydev/manhquydev">manhquydev</a> · <a href="https://github.com/manhquydev/rice-cooker-order-system">rice-cooker-order-system</a> · <a href="https://github.com/manhquydev/AI-Book-Weaver-new">AI-Book-Weaver-new</a></samp>
-</p>
+<table>
+  <tr>
+    <td>
+      <strong><a href="https://github.com/manhquydev/manhquydev">manhquydev</a></strong><br/>
+      JavaScript | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-02
+    </td>
+  </tr>
+</table>
+
+<sub>Source: GitHub REST API.</sub>
 <!-- PROJECT-STATS:END -->
 
 ---
