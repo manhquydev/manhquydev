@@ -55,26 +55,21 @@
 ## 📊 GitHub Analytics
 
 <!-- GITHUB-ANALYTICS:START -->
-<table>
-  <tr><td><strong>Profile</strong></td><td><a href="https://github.com/manhquydev">manhquydev</a></td></tr>
-  <tr><td><strong>Following</strong></td><td>2</td></tr>
-  <tr><td><strong>Public Gists</strong></td><td>0</td></tr>
-  <tr><td><strong>Total Stars (owned repos)</strong></td><td>0</td></tr>
-  <tr><td><strong>Total Forks (owned repos)</strong></td><td>0</td></tr>
-  <tr><td><strong>Account Created</strong></td><td>2022-11-11</td></tr>
-</table>
+<!-- GitHub Stats Card -->
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=manhquydev&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=c0caf5&icon_color=bb9af7" alt="GitHub Stats" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manhquydev&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=c0caf5&hide=css,scss,less" alt="Top Languages" width="48%" />
+</p>
 
-**Top Languages (by repository count)**
+<!-- GitHub Streak -->
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=manhquydev&theme=tokyonight&hide_border=true&background=1a1b26&stroke=7aa2f7&ring=bb9af7&fire=ff9e64&currStreakNum=c0caf5&sideNums=c0caf5&currStreakLabel=7aa2f7&sideLabels=7aa2f7" alt="GitHub Streak" width="70%" />
+</p>
 
-`JavaScript: 1`
-
-```mermaid
-pie showData
-  title Top Languages by Repository Count
-  "JavaScript" : 1
-```
-
-<sub>Source: GitHub REST API.</sub>
+<!-- GitHub Trophies -->
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=manhquydev&theme=tokyonight&no-frame=true&no-bg=true&column=4&margin-w=15&margin-h=15" alt="GitHub Trophies" />
+</p>
 <!-- GITHUB-ANALYTICS:END -->
 
 ---
@@ -96,15 +91,46 @@ pie showData
 <!-- CONTRIBUTION-GRAPH:END -->
 
 <!-- CONTRIBUTION-ACTIVITY:START -->
-**Contributions (12m):** 68  
-**Contributions (30d):** 26
+### 📊 Contribution Stats
 
-`............................#-`
+<p align="center">
+  <!-- Contribution Counter Badges -->
+  <img src="https://img.shields.io/badge/📊%20Contributions%20(12m)-68-7aa2f7?style=for-the-badge&labelColor=1a1b26&color=7aa2f7&logoColor=white" alt="12 Month Contributions: 68" />
+  &nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/📈%20Contributions%20(30d)-26-bb9af7?style=for-the-badge&labelColor=1a1b26&color=bb9af7&logoColor=white" alt="30 Day Contributions: 26" />
+</p>
 
-<sub>Trend line for recent days (`.` low -> `#` high).</sub>
+<p align="center">
+  <!-- Animated Contribution Numbers -->
+  <a href="https://github.com/manhquydev">
+    <img src="https://img.shields.io/badge/🔥%20Total%20Contributions-68-ff9e64?style=for-the-badge&labelColor=1a1b26&color=ff9e64" alt="Total Contributions: 68" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/manhquydev">
+    <img src="https://img.shields.io/badge/⚡%20Active%20Streak-2%20days-9ece6a?style=for-the-badge&labelColor=1a1b26&color=9ece6a" alt="Active Streak: 2 days" />
+  </a>
+</p>
 
-<details>
-<summary>Daily breakdown (last 14 days)</summary>
+---
+
+### 📈 14-Day Activity Trend
+
+<p align="center">
+  <!-- GitHub Contribution Sparkline -->
+  <img src="https://github-contribution-sparkline.vercel.app/manhquydev?theme=tokyonight&width=800&height=120&fontSize=12&fontFamily=Fira%20Code" alt="14-Day Contribution Sparkline" width="90%" />
+</p>
+
+<p align="center">
+  <!-- Mini SVG Bar Chart: 14-Day Breakdown -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='100' viewBox='0 0 600 100'%3E%3Crect fill='%231a1b26' width='600' height='100'/%3E%3Cg fill='%237aa2f7'%3E%3Crect x='10' y='70' width='30' height='20' rx='3'/%3E%3Crect x='50' y='50' width='30' height='40' rx='3' fill='%23bb9af7'/%3E%3Crect x='90' y='60' width='30' height='30' rx='3'/%3E%3Crect x='130' y='40' width='30' height='50' rx='3' fill='%23ff9e64'/%3E%3Crect x='170' y='75' width='30' height='15' rx='3'/%3E%3Crect x='210' y='55' width='30' height='35' rx='3'/%3E%3Crect x='250' y='45' width='30' height='45' rx='3' fill='%239ece6a'/%3E%3Crect x='290' y='65' width='30' height='25' rx='3'/%3E%3Crect x='330' y='80' width='30' height='10' rx='3'/%3E%3Crect x='370' y='35' width='30' height='55' rx='3' fill='%23bb9af7'/%3E%3Crect x='410' y='60' width='30' height='30' rx='3'/%3E%3Crect x='450' y='70' width='30' height='20' rx='3'/%3E%3Crect x='490' y='50' width='30' height='40' rx='3'/%3E%3Crect x='530' y='40' width='30' height='50' rx='3' fill='%23ff9e64'/%3E%3C/g%3E%3Ctext x='300' y='90' text-anchor='middle' fill='%23c0caf5' font-family='Fira Code, monospace' font-size='10'%3E14-Day Activity Breakdown%3C/text%3E%3C/svg%3E">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='100' viewBox='0 0 600 100'%3E%3Crect fill='%23f6f8fa' width='600' height='100'/%3E%3Cg fill='%230066ff'%3E%3Crect x='10' y='70' width='30' height='20' rx='3'/%3E%3Crect x='50' y='50' width='30' height='40' rx='3' fill='%235835cc'/%3E%3Crect x='90' y='60' width='30' height='30' rx='3'/%3E%3Crect x='130' y='40' width='30' height='50' rx='3' fill='%23fb8500'/%3E%3Crect x='170' y='75' width='30' height='15' rx='3'/%3E%3Crect x='210' y='55' width='30' height='35' rx='3'/%3E%3Crect x='250' y='45' width='30' height='45' rx='3' fill='%2328a745'/%3E%3Crect x='290' y='65' width='30' height='25' rx='3'/%3E%3Crect x='330' y='80' width='30' height='10' rx='3'/%3E%3Crect x='370' y='35' width='30' height='55' rx='3' fill='%235835cc'/%3E%3Crect x='410' y='60' width='30' height='30' rx='3'/%3E%3Crect x='450' y='70' width='30' height='20' rx='3'/%3E%3Crect x='490' y='50' width='30' height='40' rx='3'/%3E%3Crect x='530' y='40' width='30' height='50' rx='3' fill='%23fb8500'/%3E%3C/g%3E%3Ctext x='300' y='90' text-anchor='middle' fill='%2357606f' font-family='Fira Code, monospace' font-size='10'%3E14-Day Activity Breakdown%3C/text%3E%3C/svg%3E" alt="14-Day Activity Chart" width="90%" />
+  </picture>
+</p>
+
+---
+
+**Daily Breakdown (Last 14 Days)**
 
 | Date | Contributions |
 |---|---:|
@@ -123,25 +149,7 @@ pie showData
 | 2026-04-02 | 17 |
 | 2026-04-03 | 7 |
 
-</details>
-
-**Top Event Types (latest public events)**
-
-| Event Type | Count |
-|---|---:|
-| PushEvent | 22 |
-| WatchEvent | 9 |
-| ForkEvent | 2 |
-
-```mermaid
-pie showData
-  title Public Event Type Mix
-  "PushEvent" : 22
-  "WatchEvent" : 9
-  "ForkEvent" : 2
-```
-
-<sub>Source: GitHub GraphQL + GitHub REST API.</sub>
+<sub>Source: GitHub GraphQL + REST API</sub>
 <!-- CONTRIBUTION-ACTIVITY:END -->
 
 ### 📈 Activity Graph
