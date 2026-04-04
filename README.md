@@ -19,12 +19,12 @@
   <tr>
     <td align="center"><strong>Followers</strong><br/>2</td>
     <td align="center"><strong>Public Repos</strong><br/>10</td>
-    <td align="center"><strong>Contributions (30d)</strong><br/>26</td>
-    <td align="center"><strong>Contributions (12m)</strong><br/>68</td>
+    <td align="center"><strong>Contributions (30d)</strong><br/>28</td>
+    <td align="center"><strong>Contributions (12m)</strong><br/>70</td>
   </tr>
 </table>
 
-<sub>Last updated: 2026-04-03 05:03:42 UTC</sub>
+<sub>Last updated: 2026-04-04 04:48:39 UTC</sub>
 <!-- HERO-KPI:END -->
 
 ---
@@ -55,26 +55,26 @@
 ## 📊 GitHub Analytics
 
 <!-- GITHUB-ANALYTICS:START -->
-<!-- GitHub Stats Overview -->
-<p align="center">
-  <img src="https://img.shields.io/badge/📊%20Public%20Repos-10-7aa2f7?style=for-the-badge&labelColor=1a1b26&color=7aa2f7" alt="Public Repos" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/⭐%20Total%20Stars-0-bb9af7?style=for-the-badge&labelColor=1a1b26&color=bb9af7" alt="Total Stars" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/🔀%20Total%20Forks-0-9ece6a?style=for-the-badge&labelColor=1a1b26&color=9ece6a" alt="Total Forks" />
-</p>
+<table>
+  <tr><td><strong>Profile</strong></td><td><a href="https://github.com/manhquydev">manhquydev</a></td></tr>
+  <tr><td><strong>Following</strong></td><td>2</td></tr>
+  <tr><td><strong>Public Gists</strong></td><td>0</td></tr>
+  <tr><td><strong>Total Stars (owned repos)</strong></td><td>0</td></tr>
+  <tr><td><strong>Total Forks (owned repos)</strong></td><td>0</td></tr>
+  <tr><td><strong>Account Created</strong></td><td>2022-11-11</td></tr>
+</table>
 
-<!-- Top Languages -->
-<p align="center">
-  <strong>Top Languages:</strong>
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML" />
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-</p>
+**Top Languages (by repository count)**
+
+`JavaScript: 1`
+
+```mermaid
+pie showData
+  title Top Languages by Repository Count
+  "JavaScript" : 1
+```
+
+<sub>Source: GitHub REST API.</sub>
 <!-- GITHUB-ANALYTICS:END -->
 
 ---
@@ -96,26 +96,52 @@
 <!-- CONTRIBUTION-GRAPH:END -->
 
 <!-- CONTRIBUTION-ACTIVITY:START -->
-### 📊 Contribution Stats
+**Contributions (12m):** 70  
+**Contributions (30d):** 28
 
-<p align="center">
-  <!-- Contribution Counter Badges -->
-  <img src="https://img.shields.io/badge/📊%20Contributions%20(12m)-68-7aa2f7?style=for-the-badge&labelColor=1a1b26&color=7aa2f7&logoColor=white" alt="12 Month Contributions: 68" />
-  &nbsp;&nbsp;
-  <img src="https://img.shields.io/badge/📈%20Contributions%20(30d)-26-bb9af7?style=for-the-badge&labelColor=1a1b26&color=bb9af7&logoColor=white" alt="30 Day Contributions: 26" />
-</p>
+`...........................#-.`
 
-<p align="center">
-  <!-- Animated Contribution Numbers -->
-  <a href="https://github.com/manhquydev">
-    <img src="https://img.shields.io/badge/🔥%20Total%20Contributions-68-ff9e64?style=for-the-badge&labelColor=1a1b26&color=ff9e64" alt="Total Contributions: 68" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/manhquydev">
-    <img src="https://img.shields.io/badge/⚡%20Active%20Streak-2%20days-9ece6a?style=for-the-badge&labelColor=1a1b26&color=9ece6a" alt="Active Streak: 2 days" />
-  </a>
-</p>
+<sub>Trend line for recent days (`.` low -> `#` high).</sub>
 
+<details>
+<summary>Daily breakdown (last 14 days)</summary>
+
+| Date | Contributions |
+|---|---:|
+| 2026-03-22 | 0 |
+| 2026-03-23 | 0 |
+| 2026-03-24 | 0 |
+| 2026-03-25 | 0 |
+| 2026-03-26 | 0 |
+| 2026-03-27 | 0 |
+| 2026-03-28 | 0 |
+| 2026-03-29 | 0 |
+| 2026-03-30 | 0 |
+| 2026-03-31 | 1 |
+| 2026-04-01 | 1 |
+| 2026-04-02 | 17 |
+| 2026-04-03 | 9 |
+| 2026-04-04 | 0 |
+
+</details>
+
+**Top Event Types (latest public events)**
+
+| Event Type | Count |
+|---|---:|
+| PushEvent | 24 |
+| WatchEvent | 9 |
+| ForkEvent | 2 |
+
+```mermaid
+pie showData
+  title Public Event Type Mix
+  "PushEvent" : 24
+  "WatchEvent" : 9
+  "ForkEvent" : 2
+```
+
+<sub>Source: GitHub GraphQL + GitHub REST API.</sub>
 <!-- CONTRIBUTION-ACTIVITY:END -->
 
 ### 📈 Activity Graph
@@ -138,7 +164,7 @@
   <tr>
     <td>
       <strong><a href="https://github.com/manhquydev/manhquydev">manhquydev</a></strong><br/>
-      JavaScript | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-02
+      JavaScript | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-03
     </td>
   </tr>
 </table>
