@@ -18,13 +18,13 @@
 <table>
   <tr>
     <td align="center"><strong>Followers</strong><br/>2</td>
-    <td align="center"><strong>Public Repos</strong><br/>10</td>
-    <td align="center"><strong>Contributions (30d)</strong><br/>28</td>
-    <td align="center"><strong>Contributions (12m)</strong><br/>70</td>
+    <td align="center"><strong>Public Repos</strong><br/>11</td>
+    <td align="center"><strong>Contributions (30d)</strong><br/>36</td>
+    <td align="center"><strong>Contributions (12m)</strong><br/>78</td>
   </tr>
 </table>
 
-<sub>Last updated: 2026-04-13 05:40:24 UTC</sub>
+<sub>Last updated: 2026-04-14 05:22:02 UTC</sub>
 <!-- HERO-KPI:END -->
 
 ---
@@ -66,11 +66,12 @@
 
 **Top Languages (by repository count)**
 
-`JavaScript: 1`
+`Python: 1` `JavaScript: 1`
 
 ```mermaid
 pie showData
   title Top Languages by Repository Count
+  "Python" : 1
   "JavaScript" : 1
 ```
 
@@ -96,10 +97,10 @@ pie showData
 <!-- CONTRIBUTION-GRAPH:END -->
 
 <!-- CONTRIBUTION-ACTIVITY:START -->
-**Contributions (12m):** 70  
-**Contributions (30d):** 28
+**Contributions (12m):** 78  
+**Contributions (30d):** 36
 
-`..................#-..........`
+`.................#-........::.`
 
 <sub>Trend line for recent days (`.` low -> `#` high).</sub>
 
@@ -108,7 +109,6 @@ pie showData
 
 | Date | Contributions |
 |---|---:|
-| 2026-03-31 | 1 |
 | 2026-04-01 | 1 |
 | 2026-04-02 | 17 |
 | 2026-04-03 | 9 |
@@ -120,8 +120,9 @@ pie showData
 | 2026-04-09 | 0 |
 | 2026-04-10 | 0 |
 | 2026-04-11 | 0 |
-| 2026-04-12 | 0 |
-| 2026-04-13 | 0 |
+| 2026-04-12 | 4 |
+| 2026-04-13 | 4 |
+| 2026-04-14 | 0 |
 
 </details>
 
@@ -130,15 +131,17 @@ pie showData
 | Event Type | Count |
 |---|---:|
 | PushEvent | 24 |
-| WatchEvent | 15 |
+| WatchEvent | 14 |
 | ForkEvent | 2 |
+| CreateEvent | 1 |
 
 ```mermaid
 pie showData
   title Public Event Type Mix
   "PushEvent" : 24
-  "WatchEvent" : 15
+  "WatchEvent" : 14
   "ForkEvent" : 2
+  "CreateEvent" : 1
 ```
 
 <sub>Source: GitHub GraphQL + GitHub REST API.</sub>
@@ -163,8 +166,14 @@ pie showData
 <table>
   <tr>
     <td>
+      <strong><a href="https://github.com/manhquydev/Flappy-Bird">Flappy-Bird</a></strong><br/>
+      Python | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-13
+    </td>
+  </tr>
+  <tr>
+    <td>
       <strong><a href="https://github.com/manhquydev/manhquydev">manhquydev</a></strong><br/>
-      JavaScript | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-12
+      JavaScript | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-13
     </td>
   </tr>
 </table>
