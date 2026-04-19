@@ -20,11 +20,11 @@
     <td align="center"><strong>Followers</strong><br/>2</td>
     <td align="center"><strong>Public Repos</strong><br/>11</td>
     <td align="center"><strong>Contributions (30d)</strong><br/>36</td>
-    <td align="center"><strong>Contributions (12m)</strong><br/>77</td>
+    <td align="center"><strong>Contributions (12m)</strong><br/>76</td>
   </tr>
 </table>
 
-<sub>Last updated: 2026-04-18 05:05:16 UTC</sub>
+<sub>Last updated: 2026-04-19 05:27:17 UTC</sub>
 <!-- HERO-KPI:END -->
 
 ---
@@ -97,10 +97,10 @@ pie showData
 <!-- CONTRIBUTION-GRAPH:END -->
 
 <!-- CONTRIBUTION-ACTIVITY:START -->
-**Contributions (12m):** 77  
+**Contributions (12m):** 76  
 **Contributions (30d):** 36
 
-`.............#-........::.....`
+`............#-........::......`
 
 <sub>Trend line for recent days (`.` low -> `#` high).</sub>
 
@@ -109,7 +109,6 @@ pie showData
 
 | Date | Contributions |
 |---|---:|
-| 2026-04-05 | 0 |
 | 2026-04-06 | 0 |
 | 2026-04-07 | 0 |
 | 2026-04-08 | 0 |
@@ -123,6 +122,7 @@ pie showData
 | 2026-04-16 | 0 |
 | 2026-04-17 | 0 |
 | 2026-04-18 | 0 |
+| 2026-04-19 | 0 |
 
 </details>
 
@@ -167,7 +167,7 @@ pie showData
   <tr>
     <td>
       <strong><a href="https://github.com/manhquydev/manhquydev">manhquydev</a></strong><br/>
-      JavaScript | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-17
+      JavaScript | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-18
     </td>
   </tr>
   <tr>
