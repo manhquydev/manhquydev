@@ -24,7 +24,7 @@
   </tr>
 </table>
 
-<sub>Last updated: 2026-04-23 05:28:42 UTC</sub>
+<sub>Last updated: 2026-04-24 05:33:59 UTC</sub>
 <!-- HERO-KPI:END -->
 
 ---
@@ -100,7 +100,7 @@ pie showData
 **Contributions (12m):** 65  
 **Contributions (30d):** 36
 
-`........#-........::..........`
+`.......#-........::...........`
 
 <sub>Trend line for recent days (`.` low -> `#` high).</sub>
 
@@ -109,7 +109,6 @@ pie showData
 
 | Date | Contributions |
 |---|---:|
-| 2026-04-10 | 0 |
 | 2026-04-11 | 0 |
 | 2026-04-12 | 4 |
 | 2026-04-13 | 4 |
@@ -123,6 +122,7 @@ pie showData
 | 2026-04-21 | 0 |
 | 2026-04-22 | 0 |
 | 2026-04-23 | 0 |
+| 2026-04-24 | 0 |
 
 </details>
 
@@ -167,7 +167,7 @@ pie showData
   <tr>
     <td>
       <strong><a href="https://github.com/manhquydev/manhquydev">manhquydev</a></strong><br/>
-      JavaScript | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-22
+      JavaScript | Stars 0 | Forks 0 | Watchers 0 | Updated 2026-04-23
     </td>
   </tr>
   <tr>
