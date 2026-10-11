@@ -1,30 +1,23 @@
 # Codebase Summary
 
 ## Overview
-This repository serves as the professional technical portfolio for Mạnh Quý, a Full-Stack Developer specializing in EdTech solutions. The codebase is currently focused on the public-facing documentation and project showcase architecture.
+The repository serves as the GitHub profile for Mạnh Quý, maintained as a documentation-as-code project with automated metrics.
 
 ## Project Structure
-- `README.md`: Bilingual (EN/VI) entry point, recruiter-optimized with impact metrics and featured projects.
-- `docs/`: Technical documentation, architectural records, and standards.
-- `plans/`: Implementation roadmaps, research reports, and phase-specific task lists.
+- `README.md`: Profile entry point with a clean markdown layout and auto-updated metrics.
+- `docs/`: Technical documentation and architectural records.
+- `plans/`: Dated implementation plan folders.
 
 ## Core Components
-### 1. Portfolio Interface
-The primary interface is defined in `README.md`, utilizing GitHub Markdown features, Shields.io badges, and dynamic stats widgets (GitHub Stats, Top Languages, Streak Stats).
-
-### 2. Project Showcase
-- **Python Visualizer**: Interactive step-by-step code execution tool.
-- **Student Forum Web**: Collaborative platform for educational discussion.
-- **Notable Projects**: Language Center Management, CodeVision Academy.
+### 1. Profile Interface
+The primary interface is defined in `README.md`, using minimal, clean Markdown with auto-updated GitHub metrics, contribution heatmaps, and live repository statistics (the PROJECT-STATS table).
 
 ## Technology Stack
-- **Frontend**: React, JavaScript, CSS3, TailwindCSS.
-- **Backend**: Node.js, Express.js.
-- **Database**: MongoDB, MySQL.
-- **Tools**: Git, VS Code, Python AST Parser, Canvas API, Monaco Editor.
+- **Automation scripts**: Node.js built-in modules (`fs`, `https`); no external dependencies.
+- **CI/CD**: GitHub Actions workflows.
+- **Content**: Plain Markdown and SVG assets.
 
 ## Development Workflow
-The project follows a structured phase-based upgrade path:
-- **Phase 1**: Professional README upgrade (Completed).
-- **Phase 2**: Visual assets and dynamic skill visualization.
-- **Phase 3**: GitHub Actions automation and dynamic feed integration.
+Historical phase-based upgrade path:
+- **Phase 1**: Professional README upgrade (completed; superseded).
+- **Phase 2**: Concise basic profile refresh (completed 2026-10-11; current).

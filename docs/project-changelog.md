@@ -1,5 +1,19 @@
 # Project Changelog
 
+## [1.2.0] - 2026-10-11
+
+### Changed
+- Refreshed profile README to a basic, concise, professional format without heavy decorative widgets.
+- Simplified `scripts/update-readme.js` output: replaced Mermaid pie charts and ASCII sparklines with compact text metrics.
+- Streamlined `MAINTENANCE.md` to reflect active GitHub Actions workflows and removed stale references.
+- `scripts/update-readme.js` now refuses to run (exit 1, no writes) when `data/github-metrics.json` or `data/project-stats.json` is missing or empty.
+- Contribution heatmap palette muted to a single-hue scale.
+
+### Removed
+- Removed decorative widgets (typing SVG, capsule-render waving headers/footers, quotes widget, third-party activity graphs).
+- Removed unused premium generators and templates (`.github/scripts/`, `templates/`, `assets/premium/`, `assets/progress-bars/`, `.github/workflows/update-premium-profile.yml`).
+- Removed obsolete dashboard and legacy SVG assets (`assets/skill-radar.svg`, `github-dashboard-*.svg`, `work-focus-*.svg`, `contact-rail-*.svg`, `core-stack-*.svg`).
+
 ## [1.1.0] - 2026-02-08
 
 ### Added
