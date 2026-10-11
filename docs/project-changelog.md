@@ -10,7 +10,7 @@
 
 ### Changed
 - Upgraded profile README to v1.3 using verified data pack facts: positioning updated to "AI Automation & LLM Integration · Fullstack · Open to remote work".
-- Refreshed About section with factual background (AI20K cohort 2, appsec prototype Sentinel, FlowSkill maintainer, Teky instructor 100+ students, VIU IT engineer).
+- Refreshed About section with factual background (AI20K cohort 2, FlowSkill maintainer, Teky instructor 100+ students, VIU IT engineer).
 - Standardized contact links with primary domain email `hello@manhquy.id.vn`.
 - Synchronized `docs/project-overview-pdr.md` functional requirements and acceptance criteria for banner and work graphic layer.
 

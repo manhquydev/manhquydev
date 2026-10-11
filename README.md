@@ -10,7 +10,7 @@ AI Automation & LLM Integration · Fullstack · Open to remote work
 
 ## About
 
-- Completed Vingroup–VinUni AI20K (cohort 2); built Sentinel, an AI-assisted appsec analysis prototype (summer 2026); IT engineer from VIU (graduated Dec 2025).
+- Completed Vingroup–VinUni AI20K (cohort 2); IT engineer from VIU (graduated Dec 2025).
 - Creator and maintainer of FlowSkill, an open-source gated build harness for coding agents; programming instructor at Teky for 100+ students since 2023.
 - Focused on AI automation, LLM integration, and fullstack development; open to remote roles.
 
