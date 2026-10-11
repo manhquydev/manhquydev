@@ -13,9 +13,10 @@ Maintain a concise, professional, auto-updated GitHub profile README for `manhqu
   - `HERO-KPI`, `GITHUB-ANALYTICS`, `CONTRIBUTION-GRAPH`, `CONTRIBUTION-ACTIVITY`, `PROJECT-STATS`
 - **Data pipeline**: `scripts/fetch-github-metrics.js` writes `data/github-metrics.json`; `scripts/fetch-project-stats.js` writes `data/project-stats.json`. Both run via the daily `update-project-stats.yml` Actions workflow, followed by `scripts/update-readme.js`.
 - **Contribution heatmap**: `assets/readme/contribution-heatmap-light.svg` and `-dark.svg` generated from the contribution calendar in the metrics data.
-- **Tech stack**: Plain-text inline code list; no badge-service images.
+- **Header banner**: `assets/readme/banner-light.svg` and `-dark.svg` (typographic banner with name, positioning, location/remote availability, single-hue muted slate palette, light/dark switching via `<picture>`).
+- **Selected Work**: `assets/readme/work-light.svg` and `-dark.svg` (4 compact project cards: FlowSkill, Sentinel, VietExplore AI, Ephemera with status indicators and tech tags), accompanied by a compact plain-markdown index.
+- **Tech stack**: Categorized 2-column table; no badge-service images.
 - **Contact links**: Plain-text links in a "Connect" section.
-
 ## Non-Functional Requirements
 - No third-party decorative widgets (no typing SVG, capsule-render, quotes, or badge-style services).
 - Minimal external requests at render time; all data baked into the README and local SVGs.
@@ -27,7 +28,7 @@ Maintain a concise, professional, auto-updated GitHub profile README for `manhqu
 - `node scripts/update-readme.js` is idempotent when both data files are present and populated.
 - `node scripts/update-readme.js` exits with code 1 and does not modify `README.md` or the heatmap SVGs when either data file is missing or empty.
 - The contribution heatmap SVGs regenerate from `data/github-metrics.json`.
-
+- Header banner and Selected Work SVGs are self-contained local files in `assets/readme/`, render valid XML, adhere to the single-hue muted palette, and switch themes cleanly via `<picture>`.
 ---
 
 The prior bilingual/featured-projects PDR is superseded as of 2026-10-11 (see `docs/project-changelog.md` [1.2.0]).

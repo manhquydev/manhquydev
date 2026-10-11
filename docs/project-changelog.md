@@ -1,5 +1,19 @@
 # Project Changelog
 
+## [1.3.0] - 2026-10-12
+
+### Added
+- Typographic header banner SVGs (`assets/readme/banner-light.svg`, `banner-dark.svg`) featuring name, positioning, and location/remote availability.
+- Selected Work card row SVGs (`assets/readme/work-light.svg`, `work-dark.svg`) with 4 compact project cards (FlowSkill, Sentinel, VietExplore AI, Ephemera), honest status indicators, and tech tags.
+- Compact plain-text index for Selected Work ensuring links and statuses remain copyable and searchable without images.
+- Grouped 2-column markdown table for technical stack categorization (AI/LLM, Languages, Frameworks, Data & Infra).
+
+### Changed
+- Upgraded profile README to v1.3 using verified data pack facts: positioning updated to "AI Automation & LLM Integration · Fullstack · Open to remote work".
+- Refreshed About section with factual background (AI20K cohort 2, appsec prototype Sentinel, FlowSkill maintainer, Teky instructor 100+ students, VIU IT engineer).
+- Standardized contact links with primary domain email `hello@manhquy.id.vn`.
+- Synchronized `docs/project-overview-pdr.md` functional requirements and acceptance criteria for banner and work graphic layer.
+
 ## [1.2.0] - 2026-10-11
 
 ### Changed
