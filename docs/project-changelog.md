@@ -1,5 +1,16 @@
 # Project Changelog
 
+## [1.4.0] - 2026-10-12
+
+### Changed
+- Profile trimmed to research-backed essentials: header banner, about, selected work, stack, activity heatmap, and connect links.
+- Contribution heatmap refreshed from real GitHub data (50 repos, 2,551 annual contributions) and consolidated under the `Activity` section.
+- Streamlined update pipeline to fetch only GitHub metrics and generate the activity heatmap.
+
+### Removed
+- Removed vanity and low-signal auto-generated blocks (`HERO-KPI`, `GITHUB-ANALYTICS`, `CONTRIBUTION-ACTIVITY`, `PROJECT-STATS`) per research into prominent engineer profile patterns (`plans/2026-10-12-profile-patterns-research.md`).
+- Clean cutover: deleted `scripts/fetch-project-stats.js`, removed project stats steps from `.github/workflows/update-project-stats.yml`, and cleaned unused npm scripts (`update:stats`, `test:stats`).
+
 ## [1.3.0] - 2026-10-12
 
 ### Added
