@@ -2,7 +2,6 @@ const fs = require("fs");
 
 const README_PATH = "README.md";
 const METRICS_DATA = "data/github-metrics.json";
-const STATS_DATA = "data/project-stats.json";
 const HEATMAP_DIR = "assets/readme";
 const HEATMAP_LIGHT = `${HEATMAP_DIR}/contribution-heatmap-light.svg`;
 const HEATMAP_DARK = `${HEATMAP_DIR}/contribution-heatmap-dark.svg`;
@@ -21,80 +20,10 @@ function updateSection(content, startMarker, endMarker, newContent) {
   return content.replace(blockPattern, replacement);
 }
 
-function formatDate(value) {
-  if (!value) {
-    return "N/A";
-  }
-  return value.slice(0, 10);
-}
-
-function formatDateTimeUtc(value) {
-  if (!value) {
-    return "N/A";
-  }
-  return `${value.slice(0, 19).replace("T", " ")} UTC`;
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
-
 function ensureDirectory(path) {
   if (!fs.existsSync(path)) {
     fs.mkdirSync(path, { recursive: true });
   }
-}
-
-function generateHeroKpiSection(metrics) {
-  const user = metrics.user || {};
-  const contribution = metrics.contribution || {};
-
-  const followers = user.followers ?? 0;
-  const publicRepos = user.publicRepos ?? 0;
-  const last30 = contribution.totalContributionsLast30Days ?? 0;
-  const lastYear = contribution.totalContributionsLastYear ?? 0;
-  const updatedAt = formatDateTimeUtc(metrics.generatedAt || "");
-
-  return [
-    "<table><tr>",
-    `  <td align="center"><strong>Followers</strong><br/>${followers}</td>`,
-    `  <td align="center"><strong>Public Repos</strong><br/>${publicRepos}</td>`,
-    `  <td align="center"><strong>Contributions (30d)</strong><br/>${last30}</td>`,
-    `  <td align="center"><strong>Contributions (12m)</strong><br/>${lastYear}</td>`,
-    "</tr></table>",
-    "",
-    `<sub>Last updated: ${updatedAt}</sub>`,
-  ].join("\n");
-}
-
-function generateAnalyticsSection(metrics) {
-  const user = metrics.user || {};
-  const languages = Array.isArray(metrics.topLanguages) ? metrics.topLanguages : [];
-
-  let markdown = "<table>\n";
-  markdown += "  <tr><td><strong>Profile</strong></td>";
-  markdown += `<td><a href="${escapeHtml(user.profileUrl || "#")}">${escapeHtml(user.login || "N/A")}</a></td></tr>\n`;
-  markdown += `  <tr><td><strong>Following</strong></td><td>${user.following ?? 0}</td></tr>\n`;
-  markdown += `  <tr><td><strong>Public Gists</strong></td><td>${user.publicGists ?? 0}</td></tr>\n`;
-  markdown += `  <tr><td><strong>Total Stars (owned repos)</strong></td><td>${user.totalStars ?? 0}</td></tr>\n`;
-  markdown += `  <tr><td><strong>Total Forks (owned repos)</strong></td><td>${user.totalForks ?? 0}</td></tr>\n`;
-  markdown += `  <tr><td><strong>Account Created</strong></td><td>${formatDate(user.createdAt || "")}</td></tr>\n`;
-  markdown += "</table>\n\n";
-
-  markdown += "**Top Languages (by repository count)**\n\n";
-  if (languages.length === 0) {
-    markdown += "`N/A: 0`\n";
-  } else {
-    markdown += languages
-      .map((item) => `\`${item.language}: ${item.repositories}\``)
-      .join(" · ") + "\n";
-  }
-
-  return markdown.trimEnd();
 }
 
 function buildContributionHeatmapSvg(metrics, theme) {
@@ -178,29 +107,6 @@ function writeContributionHeatmapAssets(metrics) {
   fs.writeFileSync(HEATMAP_DARK, buildContributionHeatmapSvg(metrics, darkTheme), "utf8");
 }
 
-function generateContributionActivitySection(metrics) {
-  const contribution = metrics.contribution || {};
-  const eventTypes = Array.isArray(contribution.topEventTypes) ? contribution.topEventTypes : [];
-  const totalYear = contribution.totalContributionsLastYear ?? 0;
-  const last30 = contribution.totalContributionsLast30Days ?? 0;
-
-  let markdown = `**Contributions (12m):** ${totalYear}  \n`;
-  markdown += `**Contributions (30d):** ${last30}\n\n`;
-
-  markdown += "**Top Event Types (latest public events)**\n\n";
-  markdown += "| Event Type | Count |\n";
-  markdown += "|---|---:|\n";
-  if (eventTypes.length === 0) {
-    markdown += "| N/A | 0 |\n";
-  } else {
-    eventTypes.forEach((item) => {
-      markdown += `| ${item.type} | ${item.count} |\n`;
-    });
-  }
-
-  return markdown.trimEnd();
-}
-
 function generateContributionGraphSection(metrics) {
   const contribution = metrics.contribution || {};
   const weeks = Array.isArray(contribution.calendarWeeks) ? contribution.calendarWeeks : [];
@@ -219,22 +125,6 @@ function generateContributionGraphSection(metrics) {
   return markdown;
 }
 
-function generateProjectStatsSection(stats) {
-  const entries = Object.entries(stats || {});
-
-  if (entries.length === 0) {
-    return "_No public repositories available for stats yet._";
-  }
-
-  let markdown = "<table>\n";
-  entries.forEach(([repo, data]) => {
-    const updated = formatDate(data.updated || "");
-    markdown += `  <tr><td><strong><a href="${escapeHtml(data.url || "#")}">${escapeHtml(repo)}</a></strong><br/>${escapeHtml(data.language || "N/A")} | Stars ${data.stars ?? 0} | Forks ${data.forks ?? 0} | Watchers ${data.watchers ?? 0} | Updated ${updated}</td></tr>\n`;
-  });
-  markdown += "</table>";
-  return markdown.trimEnd();
-}
-
 function loadJson(path) {
   if (!fs.existsSync(path)) {
     return null;
@@ -245,15 +135,10 @@ function loadJson(path) {
 function main() {
   try {
     const metrics = loadJson(METRICS_DATA);
-    const stats = loadJson(STATS_DATA);
 
-    const missingOrEmpty = [METRICS_DATA, STATS_DATA].filter((path, idx) => {
-      const value = idx === 0 ? metrics : stats;
-      return !value || typeof value !== "object" || Object.keys(value).length === 0;
-    });
-    if (missingOrEmpty.length > 0) {
+    if (!metrics || typeof metrics !== "object" || Object.keys(metrics).length === 0) {
       console.error(
-        `Missing or empty data file(s): ${missingOrEmpty.join(", ")} — run fetch scripts first; README not modified.`
+        `Missing or empty data file: ${METRICS_DATA} — run fetch scripts first; README not modified.`
       );
       process.exit(1);
     }
@@ -264,37 +149,9 @@ function main() {
 
     readme = updateSection(
       readme,
-      "<!-- HERO-KPI:START -->",
-      "<!-- HERO-KPI:END -->",
-      generateHeroKpiSection(metrics)
-    );
-
-    readme = updateSection(
-      readme,
-      "<!-- GITHUB-ANALYTICS:START -->",
-      "<!-- GITHUB-ANALYTICS:END -->",
-      generateAnalyticsSection(metrics)
-    );
-
-    readme = updateSection(
-      readme,
-      "<!-- CONTRIBUTION-ACTIVITY:START -->",
-      "<!-- CONTRIBUTION-ACTIVITY:END -->",
-      generateContributionActivitySection(metrics)
-    );
-
-    readme = updateSection(
-      readme,
       "<!-- CONTRIBUTION-GRAPH:START -->",
       "<!-- CONTRIBUTION-GRAPH:END -->",
       generateContributionGraphSection(metrics)
-    );
-
-    readme = updateSection(
-      readme,
-      "<!-- PROJECT-STATS:START -->",
-      "<!-- PROJECT-STATS:END -->",
-      generateProjectStatsSection(stats)
     );
 
     fs.writeFileSync(README_PATH, readme, "utf8");

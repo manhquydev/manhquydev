@@ -25,11 +25,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Fetch project statistics
-        run: node scripts/fetch-project-stats.js
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Update README with GitHub data
         run: node scripts/update-readme.js
 
