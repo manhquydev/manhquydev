@@ -1,3 +1,4 @@
+English · [Tiếng Việt](./README.vi.md)
 # Nguyen Manh Quy
 
 <picture>
