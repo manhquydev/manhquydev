@@ -1,59 +1,45 @@
-# GitHub Profile README Patterns Research & Application
+# GitHub Profile README Patterns — Research Note
 
-**Date**: 2026-10-12  
-**Target**: `manhquydev/README.md`  
-**Focus**: Famous engineer minimalist conventions vs. community widget showcases
+- Observed: 2026-10-12 (raw READMEs fetched the same day; re-verify before reusing)
+- Method: fetched `raw.githubusercontent.com/<user>/<user>/HEAD/README.md` for 10 named users + skimmed the `abhisheknaiidu/awesome-github-profile-readme` curated list. Sample is small and non-random; only 5/10 had a profile README. Findings below are observations about this sample, not universal rules.
 
----
+## 1. Per-profile observations
 
-## 1. Raw Profile Data & Benchmarks
+All URLs fetched 2026-10-12; HTTP status, line counts, and byte sizes recorded as returned.
 
-- **torvalds** (Linus Torvalds): **0 lines** (no profile repo / 404). Relies entirely on native GitHub sidebar (327k followers) and 5 pinned repos (`linux`, `GuitarPedal`, etc.). 0 stats widgets, 0 badges.
-- **gaearon** (Dan Abramov): **0 lines** (no profile repo / 404). Minimal sidebar bio with link to `danabra.mov`; 4 pinned repos (`react`, `react.dev`, `social-app`, `analysis`). 0 widgets.
-- **mitchellh** (Mitchell Hashimoto): **0 lines** (no profile repo / 404). Sidebar link to `mitchellh.com`; 4 pinned repos (`ghostty`, `libxev`, `zig-overlay`, `vouch`). 0 widgets.
-- **antirez** (Salvatore Sanfilippo): **0 lines** (no profile repo / 404). 1-sentence bio ("Computer programmer based in Sicily..."), blog link; 6 pinned repos (`rax`, `kilo`, `linenoise`, etc.). 0 widgets.
-- **yyx990803** (Evan You): **0 lines** (no profile repo / 404). 1-sentence bio ("Founder @voidzero-dev, author of @vuejs..."), 6 pinned repos (`core`, `vite`, `rolldown`, etc.). 0 widgets.
-- **sindresorhus** (Sindre Sorhus): **26 lines / 610 bytes** (`readme.md`). Nostalgic GeoCities parody with 10 vintage GIFs; exactly 2 functional links (latest app `Supercharge`, latest blog post). Deliberately omits all real stats, follower counts, and npm metrics.
-- **kentcdodds** (Kent C. Dodds): **8 lines / 265 bytes**. Single banner image linking to personal domain + 1-line text link ("[Learn more about me](https://kentcdodds.com/about)"). 0 metrics, 0 badges, 0 tables.
-- **DenverCoder1** (Jonah Lawrence): **294 lines / 28.3 KB**. Maximum widget saturation (meta-showcase for his own widget tools). Typing SVG, 5 live badge counters, 18 pinned repo/contribution cards, 70+ technology badges, streak stats card, language stats card, activity graph, raw recent event feed.
-- **anuraghazra** (Anurag Hazra): **45 lines / 2.8 KB**. Creator of `github-readme-stats`. Header image, 4-bullet bio, 5 language icons, 2-col stats cards (showcasing his own tool), 2 pinned repo cards, social icons. Clean self-promotion.
-- **schneegans** (Simon Schneegans): **19 lines / 1.2 KB**. 1-sentence current job at Carl Zeiss Jena, 1-paragraph spare-time OSS summary (4 linked tools), sponsors SVG. Explicitly commented out `github-readme-stats` in HTML comments.
-- **abhisheknaiidu/awesome-github-profile-readme**: 378 lines categorizing profiles by gimmicks (typing effects, minigames, WakaTime, Spotify cards, dynamic shields). Community consensus treats the profile as a standalone canvas; top engineers treat it as an index or omit it entirely.
+| User | README URL | Lines | Live stats/widgets? | Notable sections |
+|---|---|---|---|---|
+| torvalds | https://raw.githubusercontent.com/torvalds/torvalds/HEAD/README.md | 0 (404) | none | No profile README; native sidebar + 5 pinned repos only |
+| gaearon | https://raw.githubusercontent.com/gaearon/gaearon/HEAD/README.md | 0 (404) | none | No profile README; minimal sidebar bio, 4 pinned repos |
+| mitchellh | https://raw.githubusercontent.com/mitchellh/mitchellh/HEAD/README.md | 0 (404) | none | No profile README; sidebar link to mitchellh.com |
+| antirez | https://raw.githubusercontent.com/antirez/antirez/HEAD/README.md | 0 (404) | none | No profile README; 1-sentence bio, 6 pinned repos |
+| yyx990803 | https://raw.githubusercontent.com/yyx990803/yyx990803/HEAD/README.md | 0 (404) | none | No profile README; 1-sentence bio, 6 pinned repos |
+| sindresorhus | https://raw.githubusercontent.com/sindresorhus/sindresorhus/HEAD/readme.md | 26 (610 B) | none | Retro GeoCities parody; exactly 2 links (app + blog); zero real stats |
+| kentcdodds | https://raw.githubusercontent.com/kentcdodds/kentcdodds/HEAD/README.md | 8 (265 B) | none | Single banner image + 1 text link to kentcdodds.com/about |
+| DenverCoder1 | https://raw.githubusercontent.com/DenverCoder1/DenverCoder1/HEAD/README.md | 294 (28.4 KB) | yes — heavily | Typing SVG, badge counters, repo/contribution cards, streak + language stats, activity graph; author of the widgets he demos |
+| anuraghazra | https://raw.githubusercontent.com/anuraghazra/anuraghazra/HEAD/README.md | 45 (2.8 KB) | yes — own tool | Creator of github-readme-stats; 2-col stats cards demoing his tool, 2 pinned repo cards, social icons |
+| schneegans | https://raw.githubusercontent.com/schneegans/schneegans/HEAD/README.md | 19 (1.2 KB) | sponsors SVG only | 1-sentence job line + spare-time OSS paragraph (4 linked tools); github-readme-stats present only inside HTML comments |
 
----
+Note: `sindresorhus` serves the file at the lowercase `readme.md` path; the `README.md` casing returns 404. Both casings were checked for every 404 user above.
 
-## 2. Derived Principles
+## 2. Observed patterns (sample-level)
 
-1. **Code Over Meta-Code (Work Speaks First)**: Elite practitioners let shipping software and pinned repos carry authority. They do not write prose explaining that they write software.
-2. **Zero Vanity Metrics**: Follower counts, watcher counts, star aggregators, and view counters signal junior insecurity or promotional bias. Real-world engineering impact is rarely reflected in profile hits.
-3. **Never Display Zeroes or Low-Volume Telemetry**: Displaying metrics like "Stars: 0, Forks: 0" or event feeds dominated by "WatchEvent: 13" actively undermines perceived technical capability. Absence of metrics is neutral; low metrics are negative.
-4. **Actionable Pointers Over Exhaustive CVs**: When a README exists (Dodds, Schneegans, Sorhus), it is a concise funnel (8–26 lines) directing visitors to production apps, main repositories, or personal sites.
-5. **No Synthetic Tech-Stack Badge Grids**: Listing shields.io badges for basic tooling (HTML, CSS, Git, Markdown) is a universal junior hallmark. Technical capability is proven through project architecture in Selected Work.
-6. **First-Party Visual Assets Over Fragile Third-Party SVGs**: Community profiles break when Vercel proxy endpoints fail or rate-limit. High-signal profiles use committed SVGs or plain markdown.
-7. **Signal-to-Noise Ratio Reflects Seniority**: Brevity signals confidence and focus. Profiles under 30 lines project senior craftsmanship; 200+ line profiles project self-absorbed widget tinkering.
-8. **Native Contribution Heatmap Is the Sole Activity Anchor**: The only activity visual broadly accepted across the engineering culture is the GitHub contribution heatmap. Gamified streaks and raw event tables are viewed as noise.
+1. In this sample, 5 of 10 profiles contained no profile README at all (404): torvalds, gaearon, mitchellh, antirez, yyx990803.
+2. In this sample, the READMEs that did exist were mostly short: 4 of 5 were 8–45 lines (kentcdodds 8, schneegans 19, sindresorhus 26, anuraghazra 45); only DenverCoder1 was long (294 lines).
+3. In this sample, the widget-heavy profile (DenverCoder1, 294 lines) belongs to an author demoing his own widget tools; anuraghazra likewise uses his stats cards to showcase github-readme-stats itself.
+4. In this sample, none of the 5 profiles with READMEs displayed account-level vanity counters (follower/star totals); sindresorhus deliberately links only to an app and a blog post, and schneegans keeps github-readme-stats commented out.
+5. In this sample, when a README existed it mostly functioned as a short funnel to a personal site, a flagship repo, or a small set of linked tools — plus the two self-promotional stats-card cases above.
 
----
+## 3. Recommendations applied to manhquydev (editorial judgment — clearly labeled as ours, not findings)
 
-## 3. Application to manhquydev Profile
+Kept: banner SVG, About, Selected Work, Stack, Activity heatmap (real data), Connect.
 
-Current README structure:
-- Typographic banner SVG + Tagline
-- `About` (3 bullets: VinUni AI20K, FlowSkill maintainer / Teky instructor, focus & remote openness)
-- `Selected Work` (Work SVG cards + 4-project curated index: FlowSkill, Sentinel, VietExplore AI, Ephemera)
-- `Stack` (2-col table: AI/LLM, Languages, Frameworks, Data & Infra)
-- 5 auto-generated marker blocks (HERO-KPI, GITHUB-ANALYTICS, CONTRIBUTION-GRAPH, CONTRIBUTION-ACTIVITY, PROJECT-STATS)
-- `Connect` section
+Cleared: HERO-KPI, GITHUB-ANALYTICS, CONTRIBUTION-ACTIVITY, PROJECT-STATS — rationale: vanity/zero signals (6 followers, Stars 0 at decision time), event-type noise (WatchEvent 13), and PROJECT-STATS auto-listing uncurated repos (e.g. test/test repos) that leak past editorial selection.
 
-### Recommendations for the 5 Marker Blocks
+Explicit hypotheses, NOT evidence:
+- We hypothesize short profiles project craft; the "under 30 lines signals senior craftsmanship" idea is an aesthetic prior from this tiny sample, not a measured effect.
+- We hypothesize badge grids read as junior signals. Plausible, untested here.
 
-| Marker Block | Verdict | Justification & Principle Alignment |
-|---|---|---|
-| `<!-- HERO-KPI -->` | **CLEAR** | Shows low values (Followers: 2, 30d Contribs: 8) with a stale 2026-05 timestamp. Violates Principles 2 & 3. GitHub's native header already displays follower/repo counts; duplicating low telemetry adds negative signal. |
-| `<!-- GITHUB-ANALYTICS -->` | **CLEAR** | Explicitly displays "Stars: 0, Forks: 0, Public Gists: 0" and a distorted language split (`JavaScript: 1 · Python: 1`) that contradicts the real stack (TypeScript, FastAPI, Next.js). Violates Principles 3 & 5. |
-| `<!-- CONTRIBUTION-GRAPH -->` | **KEEP** | Aligns with Principle 8. Uses locally committed, theme-aware SVGs (`contribution-heatmap-*.svg`). Demonstrates sustained coding rhythm cleanly without vanity counters or flaky external CDNs. |
-| `<!-- CONTRIBUTION-ACTIVITY -->` | **CLEAR** | Redundant with the heatmap. The event table exposes trivial platform activity (`WatchEvent: 13, CreateEvent: 1`), signaling low development volume rather than technical output. Violates Principles 1 & 3. |
-| `<!-- PROJECT-STATS -->` | **CLEAR** | Only displays `manhquydev` and `Flappy-Bird` with "Stars 0 \| Forks 0". Ignores real flagships (`FlowSkill`, `Sentinel`). Showcasing a toy Flappy-Bird repository with zero stars severely degrades portfolio credibility. Violates Principles 1, 3, & 4. |
+## 4. Post-study data refresh (2026-10-12)
 
-### Target Profile Shape
-Retaining the Typographic Banner, About, Selected Work, Stack, Contribution Heatmap (`CONTRIBUTION-GRAPH`), and Connect links produces an uncluttered, high-credibility profile (~70 lines) aligned with senior engineering standards.
+A real authenticated API fetch on 2026-10-12 replaced the stale May-2026 snapshot: followers 6, contributions 12m 2551 / 30d 126, stars 9, public repos 50, languages Python 8 · TypeScript 4 · JavaScript 3 · HTML 3 · Shell 2 · Rust 1. Heatmap + activity now render real data; the earlier keep/clear verdicts stand after seeing real numbers (vanity counters removed regardless of their values).
